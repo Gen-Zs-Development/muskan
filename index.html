@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGen - Mental Health for Gen Z</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-blue: #4169E1;
+            --light-blue: #6495ED;
+            --dark-blue: #191970;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-image {
+            margin: 30px 0;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--royal-blue);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light-gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .service-link {
+            color: var(--royal-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .service-link i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Testimonial Section */
+        .testimonials {
+            background-color: var(--light-gray);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 60px;
+            color: var(--light-blue);
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--royal-blue);
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Mental Health Check Section */
+        .mental-health-check {
+            background-color: var(--white);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            padding: 15px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            background-color: var(--white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Book Now Section */
+        .book-now {
+            background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .book-now h2 {
+            color: var(--white);
+        }
+        
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background-color: var(--white);
+            color: var(--royal-blue);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--light-blue);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        .social-links a i{
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--royal-blue);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .booking-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+               Gen Z's Development
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Mental Health for Gen Z's Development</h1>
+            <p>Nurturing young minds for a healthier tomorrow. We provide specialized mental health services designed for the unique challenges faced by Generation Z.</p>
+            <img src="https://z-cdn-media.chatglm.cn/files/6f9345fd-a596-4059-834b-524b5e82f95e_m1.jpg?auth_key=1864510873-37ead0a9a69a44a29f3ff60c52dbcd94-0-a8573955bf923acff75f8ed3c3b20e9e" alt="Mental Health Awareness" class="hero-image">
+            <a href="#book" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive mental health support tailored for Gen Z's unique challenges</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/anxiety/400/300.jpg" alt="Anxiety Management" class="service-image">
+                    <div class="service-content">
+                        <h3>Anxiety Management</h3>
+                        <p>Learn effective techniques to manage anxiety in today's fast-paced world through evidence-based approaches.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/depression/400/300.jpg" alt="Depression Support" class="service-image">
+                    <div class="service-content">
+                        <h3>Depression Support</h3>
+                        <p>Professional guidance and support to navigate through depression and find your path to recovery.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/stress/400/300.jpg" alt="Stress Relief" class="service-image">
+                    <div class="service-content">
+                        <h3>Stress Relief Techniques</h3>
+                        <p>Discover practical strategies to reduce stress and improve your overall well-being.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/therapy/400/300.jpg" alt="Therapy Sessions" class="service-image">
+                    <div class="service-content">
+                        <h3>Therapy Sessions</h3>
+                        <p>One-on-one therapy sessions with experienced mental health professionals who understand Gen Z.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/group/400/300.jpg" alt="Group Support" class="service-image">
+                    <div class="service-content">
+                        <h3>Group Support</h3>
+                        <p>Connect with peers facing similar challenges in a safe, supportive environment.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://picsum.photos/seed/digital/400/300.jpg" alt="Digital Wellness" class="service-image">
+                    <div class="service-content">
+                        <h3>Digital Wellness</h3>
+                        <p>Learn to balance your digital life with mental well-being in today's connected world.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Dedicated to supporting Gen Z's mental health journey</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>MindGen was founded with a clear mission: to provide accessible, effective mental health support specifically designed for Generation Z. We understand the unique challenges faced by today's youth, from digital pressures to academic stress, social media anxiety to identity formation.</p>
+                    <p>Our team of mental health professionals combines expertise with genuine understanding of Gen Z's experiences. We offer a range of services tailored to meet your needs, whether you're dealing with anxiety, depression, stress, or simply seeking personal growth.</p>
+                    <p>At MindGen, we believe that mental health is just as important as physical health. We're committed to breaking down stigmas and creating a safe space where you can explore your thoughts, feelings, and concerns without judgment.</p>
+                    <a href="#testimonials" class="cta-button">Read Our Success Stories</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b5444b56-a8a0-41e3-b291-e5e880f5eb6f_m2.png?auth_key=1864510873-35e7ba360d1341d2826badcf084f87f8-0-a1b0731fe56f15035668fd94f336360a" alt="Mental Health Awareness">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonials</h2>
+                <p>Hear from those who've transformed their lives with our support</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>MindGen completely changed my perspective on mental health. The anxiety management techniques I learned have helped me navigate college applications with confidence instead of fear.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person1/100/100.jpg" alt="Alex" class="author-image">
+                        <div class="author-info">
+                            <h4>Alex Chen</h4>
+                            <p>College Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>I was skeptical about therapy, but the group support sessions made me realize I wasn't alone. The connections I've made and the coping strategies I've learned have been life-changing.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person2/100/100.jpg" alt="Jordan" class="author-image">
+                        <div class="author-info">
+                            <h4>Jordan Taylor</h4>
+                            <p>High School Senior</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>The digital wellness program helped me establish healthier boundaries with social media. I'm more present in my life and less anxious about what others think of me online.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person3/100/100.jpg" alt="Sam" class="author-image">
+                        <div class="author-info">
+                            <h4>Sam Rivera</h4>
+                            <p>Young Professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Health Check Section -->
+    <section id="mental-health-check" class="mental-health-check">
+    <div class="container">
+        <div class="section-title">
+            <h2>Mental Health Self-Assessment</h2>
+            <p>Check your mental well-being with these 10 important questions</p>
+        </div>
+        
+        <div class="assessment-container">
+            <div class="assessment-intro">
+                <p>Please answer each question honestly based on how you've been feeling over the past two weeks. This assessment is not a substitute for professional medical advice, but it can help you understand your current mental state.</p>
+            </div>
+            
+            <form id="mental-health-form">
+                <div class="question-container">
+                    <div class="question">
+                        <h3>1. How often do you feel overwhelmed by your daily responsibilities?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="4">
+                                <span>Almost always</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="3">
+                                <span>Often</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="2">
+                                <span>Sometimes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="1">
+                                <span>Rarely</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="0">
+                                <span>Never</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>2. Do you find it difficult to enjoy activities that used to bring you pleasure?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="4">
+                                <span>Almost always</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="3">
+                                <span>Often</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="2">
+                                <span>Sometimes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="1">
+                                <span>Rarely</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="0">
+                                <span>Never</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>3. How would you rate your sleep quality over the past month?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="4">
+                                <span>Poor - I have trouble falling or staying asleep most nights</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="3">
+                                <span>Below average - I have sleep problems several nights a week</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="2">
+                                <span>Average - I have occasional sleep issues</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="1">
+                                <span>Good - I sleep well most nights</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="0">
+                                <span>Excellent - I consistently get quality sleep</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>4. Do you often experience physical symptoms like headaches or stomach issues when stressed?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4" value="4">
+                                <span>Almost always</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="3">
+                                <span>Often</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="2">
+                                <span>Sometimes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="1">
+                                <span>Rarely</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="0">
+                                <span>Never</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>5. How often do you find yourself comparing your life to others on social media?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5" value="4">
+                                <span>Constantly - it affects my mood daily</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="3">
+                                <span>Frequently - it bothers me several times a week</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="2">
+                                <span>Occasionally - it bothers me sometimes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="1">
+                                <span>Rarely - I notice it but it doesn't affect me much</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="0">
+                                <span>Never - I don't compare myself to others on social media</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>6. Do you feel comfortable expressing your emotions to others?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6" value="0">
+                                <span>Very comfortable - I express myself freely</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="1">
+                                <span>Mostly comfortable - I express myself to trusted people</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="2">
+                                <span>Somewhat comfortable - I express myself occasionally</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="3">
+                                <span>Not very comfortable - I rarely express my emotions</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="4">
+                                <span>Not at all comfortable - I keep my emotions to myself</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>7. How would you describe your ability to focus on tasks?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q7" value="4">
+                                <span>Poor - I struggle to concentrate on most tasks</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="3">
+                                <span>Below average - I have difficulty focusing on many tasks</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="2">
+                                <span>Average - I can focus on some tasks but not others</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="1">
+                                <span>Good - I can focus on most tasks when needed</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="0">
+                                <span>Excellent - I can maintain focus on tasks easily</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>8. Do you have a support system you can rely on during difficult times?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q8" value="4">
+                                <span>No - I feel completely alone</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="3">
+                                <span>Very little - I have minimal support</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="2">
+                                <span>Some - I have a few people I can count on</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="1">
+                                <span>Good - I have several people I can rely on</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="0">
+                                <span>Excellent - I have a strong support system</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>9. How often do you practice self-care activities?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q9" value="4">
+                                <span>Never - I don't make time for self-care</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="3">
+                                <span>Rarely - Only when I'm feeling very stressed</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="2">
+                                <span>Sometimes - A few times a month</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="1">
+                                <span>Often - A few times a week</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="0">
+                                <span>Regularly - I make self-care a daily priority</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>10. Have you noticed significant changes in your appetite or weight recently?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q10" value="4">
+                                <span>Yes - Significant changes that concern me</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="3">
+                                <span>Yes - Noticeable changes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="2">
+                                <span>Yes - Minor changes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="1">
+                                <span>Hardly noticeable changes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="0">
+                                <span>No changes at all</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="submit-container">
+                    <button type="button" id="calculate-results" class="calculate-button">Calculate My Mental Health Score</button>
+                </div>
+            </form>
+            
+            <div id="results-container" class="results-container" style="display: none;">
+                <div class="results-header">
+                    <h3>Your Mental Health Assessment Results</h3>
+                </div>
+                <div class="results-content">
+                    <div class="score-circle">
+                        <div class="score-percentage">
+                            <span id="score-value">0%</span>
+                        </div>
+                        <div class="score-label">Mental Health Score</div>
+                    </div>
+                    <div id="score-message" class="score-message"></div>
+                    <div id="score-recommendations" class="score-recommendations"></div>
+                    <div class="results-footer">
+                        <p><strong>Disclaimer:</strong> This assessment is not a substitute for professional medical advice. If you're concerned about your mental health, please consult with a qualified healthcare professional.</p>
+                        <p>For immediate support, call our helpline at <a href="tel:9871463045">9871463045</a></p>
+                    </div>
+                    <button id="retake-test" class="retake-button">Retake Assessment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .mental-health-check {
+        background-color: var(--light-gray);
+        padding: 80px 0;
+    }
+    
+    .assessment-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .assessment-intro {
+        padding: 30px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+    }
+    
+    .assessment-intro p {
+        margin: 0;
+        line-height: 1.6;
+    }
+    
+    .question-container {
+        padding: 30px;
+    }
+    
+    .question {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .question:last-child {
+        border-bottom: none;
+    }
+    
+    .question h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .option {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .option:hover {
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .option input[type="radio"] {
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        accent-color: var(--royal-blue);
+    }
+    
+    .option span {
+        flex: 1;
+    }
+    
+    .submit-container {
+        padding: 0 30px 30px;
+        text-align: center;
+    }
+    
+    .calculate-button {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+    }
+    
+    .calculate-button:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+    }
+    
+    .results-container {
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .results-header h3 {
+        color: var(--royal-blue);
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+    
+    .score-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: conic-gradient(
+            var(--royal-blue) 0%,
+            var(--royal-blue) var(--score-percentage),
+            #eee var(--score-percentage),
+            #eee 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        position: relative;
+    }
+    
+    .score-circle::before {
+        content: '';
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+    
+    .score-percentage {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--royal-blue);
+        z-index: 1;
+    }
+    
+    .score-label {
+        font-size: 0.9rem;
+        color: #666;
+        z-index: 1;
+        margin-top: 5px;
+    }
+    
+    .score-message {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .score-recommendations {
+        background-color: rgba(65, 105, 225, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .score-recommendations h4 {
+        color: var(--royal-blue);
+        margin-bottom: 10px;
+    }
+    
+    .score-recommendations ul {
+        padding-left: 20px;
+    }
+    
+    .score-recommendations li {
+        margin-bottom: 8px;
+    }
+    
+    .results-footer {
+        margin: 20px 0;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .results-footer a {
+        color: var(--royal-blue);
+        font-weight: bold;
+    }
+    
+    .retake-button {
+        background-color: transparent;
+        color: var(--royal-blue);
+        border: 2px solid var(--royal-blue);
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .retake-button:hover {
+        background-color: var(--royal-blue);
+        color: var(--white);
+    }
+</style>
+
+<script>
+    document.getElementById('calculate-results').addEventListener('click', function() {
+        // Check if all questions have been answered
+        let allAnswered = true;
+        let totalScore = 0;
+        
+        for (let i = 1; i <= 10; i++) {
+            const questionName = 'q' + i;
+            const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+            
+            if (!selectedOption) {
+                allAnswered = false;
+                break;
+            }
+            
+            totalScore += parseInt(selectedOption.value);
+        }
+        
+        if (!allAnswered) {
+            alert('Please answer all questions before calculating your score.');
+            return;
+        }
+        
+        // Calculate percentage (inverse score - lower points mean better mental health)
+        const maxPossibleScore = 40; // 10 questions * max 4 points each
+        const invertedScore = maxPossibleScore - totalScore;
+        const percentage = Math.round((invertedScore / maxPossibleScore) * 100);
+        
+        // Hide the form and show results
+        document.getElementById('mental-health-form').style.display = 'none';
+        document.getElementById('results-container').style.display = 'block';
+        
+        // Update the score circle
+        document.getElementById('score-value').textContent = percentage + '%';
+        
+        // Update the CSS variable for the score circle
+        document.documentElement.style.setProperty('--score-percentage', percentage + '%');
+        
+        // Generate appropriate message and recommendations based on score
+        let message = '';
+        let recommendations = '';
+        
+        if (percentage >= 80) {
+            message = 'Excellent! Your mental health appears to be in a very positive state. You seem to have good coping mechanisms and a healthy approach to life\'s challenges.';
+            recommendations = `
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>Continue maintaining your healthy habits and self-care practices</li>
+                    <li>Consider sharing your positive strategies with friends and family</li>
+                    <li>Stay mindful of any changes in your mental state over time</li>
+                </ul>
+            `;
+        } else if (percentage >= 60) {
+            message = 'Good! Your mental health appears to be generally positive with room for improvement in some areas.';
+            recommendations = `
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>Focus on strengthening areas where you're experiencing challenges</li>
+                    <li>Consider incorporating more self-care activities into your routine</li>
+                    <li>Practice mindfulness or meditation to reduce stress</li>
+                    <li>Ensure you're getting adequate sleep and nutrition</li>
+                </ul>
+            `;
+        } else if (percentage >= 40) {
+            message = 'Moderate. You may be experiencing some challenges with your mental well-being that could benefit from attention.';
+            recommendations = `
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>Consider speaking with a mental health professional for guidance</li>
+                    <li>Practice stress management techniques regularly</li>
+                    <li>Ensure you have a support system you can rely on</li>
+                    <li>Limit social media use if it's affecting your mood</li>
+                    <li>Prioritize sleep, nutrition, and physical activity</li>
+                </ul>
+            `;
+        } else {
+            message = 'Your responses suggest you may be experiencing significant challenges with your mental well-being. It\'s important to seek support.';
+            recommendations = `
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>We strongly recommend speaking with a mental health professional</li>
+                    <li>Reach out to our support team at 9871463045 for immediate assistance</li>
+                    <li>Consider confiding in trusted friends or family members</li>
+                    <li>Focus on basic self-care: sleep, nutrition, and gentle physical activity</li>
+                    <li>Remember that seeking help is a sign of strength, not weakness</li>
+                </ul>
+            `;
+        }
+        
+        document.getElementById('score-message').innerHTML = message;
+        document.getElementById('score-recommendations').innerHTML = recommendations;
+    });
+    
+    // Retake test functionality
+    document.getElementById('retake-test').addEventListener('click', function() {
+        // Reset all radio buttons
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach(radio => {
+            radio.checked = false;
+        });
+        
+        // Show the form and hide results
+        document.getElementById('mental-health-form').style.display = 'block';
+        document.getElementById('results-container').style.display = 'none';
+        
+        // Scroll to the top of the assessment
+        document.getElementById('mental-health-check').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+    <!-- Book Now Section -->
+    <section id="book" class="book-now">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Consultation</h2>
+                <p>Take the first step towards better mental health today</p>
+            </div>
+            <div class="booking-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="anxiety">Anxiety Management</option>
+                            <option value="depression">Depression Support</option>
+                            <option value="stress">Stress Relief Techniques</option>
+                            <option value="therapy">Therapy Sessions</option>
+                            <option value="group">Group Support</option>
+                            <option value="digital">Digital Wellness</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking for..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Book Now</button>
+                </form>
+                <p style="margin-top: 20px;">Or call us directly at <a href="tel:9871463045" style="color: white; font-weight: bold;">9871463045</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MindGen</h3>
+                    <p>Dedicated to supporting Gen Z's mental health journey with specialized services and understanding.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#book">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Anxiety Management</a></li>
+                        <li><a href="#">Depression Support</a></li>
+                        <li><a href="#">Stress Relief Techniques</a></li>
+                        <li><a href="#">Therapy Sessions</a></li>
+                        <li><a href="#">Group Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 9871463045</li>
+                        <li><i class="fas fa-envelope"></i> info@mindgen.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Mind City, 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 MindGen. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer && otherAnswer.classList.contains('active')) {
+                        otherAnswer.classList.remove('active');
+                        otherAnswer.previousElementSibling.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                icon.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission
+        document.querySelector('.booking-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would normally send the data to a server
+            // For this example, we'll just show a success message
+            const formContainer = document.querySelector('.booking-form');
+            formContainer.innerHTML = `
+                <div style="padding: 20px; text-align: center;">
+                    <i class="fas fa-check-circle" style="font-size: 60px; margin-bottom: 20px;"></i>
+                    <h3>Thank you, ${name}!</h3>
+                    <p>Your booking request has been received. We'll contact you at ${phone} or ${email} within 24 hours to confirm your appointment.</p>
+                    <p style="margin-top: 20px;">If you need immediate assistance, please call us at <a href="tel:9871463045" style="color: white; font-weight: bold;">9871463045</a></p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
