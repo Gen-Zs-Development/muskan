@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -689,305 +690,89 @@
         </div>
     </section>
 
-    <!-- Mental Health Check Section -->
-    <section id="mental-health-check" class="mental-health-check">
+    <!-- Brain Self-Assessment Test Section -->
+<section id="brain-assessment" class="brain-assessment">
     <div class="container">
         <div class="section-title">
-            <h2>Mental Health Self-Assessment</h2>
-            <p>Check your mental well-being with these 10 important questions</p>
+            <h2>Brain Health Self-Assessment</h2>
+            <p>Evaluate your cognitive function and brain health with this comprehensive assessment</p>
         </div>
         
         <div class="assessment-container">
             <div class="assessment-intro">
-                <p>Please answer each question honestly based on how you've been feeling over the past two weeks. This assessment is not a substitute for professional medical advice, but it can help you understand your current mental state.</p>
+                <h3>About This Assessment</h3>
+                <p>This self-assessment is designed to help you evaluate various aspects of your cognitive function and brain health. It covers memory, attention, problem-solving, language skills, and other cognitive domains. Please answer honestly based on your experiences over the past month.</p>
+                <p><strong>Note:</strong> This assessment is not a diagnostic tool. If you have concerns about your cognitive health, please consult with a healthcare professional.</p>
             </div>
             
-            <form id="mental-health-form">
-                <div class="question-container">
-                    <div class="question">
-                        <h3>1. How often do you feel overwhelmed by your daily responsibilities?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q1" value="4">
-                                <span>Almost always</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1" value="3">
-                                <span>Often</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1" value="2">
-                                <span>Sometimes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1" value="1">
-                                <span>Rarely</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1" value="0">
-                                <span>Never</span>
-                            </label>
-                        </div>
+            <div id="assessment-form" class="assessment-form">
+                <div class="assessment-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="assessment-progress"></div>
                     </div>
-                    
-                    <div class="question">
-                        <h3>2. Do you find it difficult to enjoy activities that used to bring you pleasure?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q2" value="4">
-                                <span>Almost always</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2" value="3">
-                                <span>Often</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2" value="2">
-                                <span>Sometimes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2" value="1">
-                                <span>Rarely</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2" value="0">
-                                <span>Never</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>3. How would you rate your sleep quality over the past month?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q3" value="4">
-                                <span>Poor - I have trouble falling or staying asleep most nights</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q3" value="3">
-                                <span>Below average - I have sleep problems several nights a week</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q3" value="2">
-                                <span>Average - I have occasional sleep issues</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q3" value="1">
-                                <span>Good - I sleep well most nights</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q3" value="0">
-                                <span>Excellent - I consistently get quality sleep</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>4. Do you often experience physical symptoms like headaches or stomach issues when stressed?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q4" value="4">
-                                <span>Almost always</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q4" value="3">
-                                <span>Often</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q4" value="2">
-                                <span>Sometimes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q4" value="1">
-                                <span>Rarely</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q4" value="0">
-                                <span>Never</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>5. How often do you find yourself comparing your life to others on social media?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q5" value="4">
-                                <span>Constantly - it affects my mood daily</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q5" value="3">
-                                <span>Frequently - it bothers me several times a week</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q5" value="2">
-                                <span>Occasionally - it bothers me sometimes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q5" value="1">
-                                <span>Rarely - I notice it but it doesn't affect me much</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q5" value="0">
-                                <span>Never - I don't compare myself to others on social media</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>6. Do you feel comfortable expressing your emotions to others?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q6" value="0">
-                                <span>Very comfortable - I express myself freely</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q6" value="1">
-                                <span>Mostly comfortable - I express myself to trusted people</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q6" value="2">
-                                <span>Somewhat comfortable - I express myself occasionally</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q6" value="3">
-                                <span>Not very comfortable - I rarely express my emotions</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q6" value="4">
-                                <span>Not at all comfortable - I keep my emotions to myself</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>7. How would you describe your ability to focus on tasks?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q7" value="4">
-                                <span>Poor - I struggle to concentrate on most tasks</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q7" value="3">
-                                <span>Below average - I have difficulty focusing on many tasks</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q7" value="2">
-                                <span>Average - I can focus on some tasks but not others</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q7" value="1">
-                                <span>Good - I can focus on most tasks when needed</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q7" value="0">
-                                <span>Excellent - I can maintain focus on tasks easily</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>8. Do you have a support system you can rely on during difficult times?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q8" value="4">
-                                <span>No - I feel completely alone</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q8" value="3">
-                                <span>Very little - I have minimal support</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q8" value="2">
-                                <span>Some - I have a few people I can count on</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q8" value="1">
-                                <span>Good - I have several people I can rely on</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q8" value="0">
-                                <span>Excellent - I have a strong support system</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>9. How often do you practice self-care activities?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q9" value="4">
-                                <span>Never - I don't make time for self-care</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q9" value="3">
-                                <span>Rarely - Only when I'm feeling very stressed</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q9" value="2">
-                                <span>Sometimes - A few times a month</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q9" value="1">
-                                <span>Often - A few times a week</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q9" value="0">
-                                <span>Regularly - I make self-care a daily priority</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="question">
-                        <h3>10. Have you noticed significant changes in your appetite or weight recently?</h3>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q10" value="4">
-                                <span>Yes - Significant changes that concern me</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q10" value="3">
-                                <span>Yes - Noticeable changes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q10" value="2">
-                                <span>Yes - Minor changes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q10" value="1">
-                                <span>Hardly noticeable changes</span>
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q10" value="0">
-                                <span>No changes at all</span>
-                            </label>
-                        </div>
-                    </div>
+                    <div class="progress-text">Question <span id="current-assessment-question">1</span> of <span id="total-assessment-questions">20</span></div>
                 </div>
                 
-                <div class="submit-container">
-                    <button type="button" id="calculate-results" class="calculate-button">Calculate My Mental Health Score</button>
+                <div id="assessment-questions" class="assessment-questions">
+                    <!-- Questions will be dynamically inserted here -->
                 </div>
-            </form>
+                
+                <div class="assessment-navigation">
+                    <button id="prev-assessment-question" class="nav-button" disabled>Previous</button>
+                    <button id="next-assessment-question" class="nav-button">Next</button>
+                    <button id="finish-assessment" class="nav-button" style="display: none;">Finish Assessment</button>
+                </div>
+            </div>
             
-            <div id="results-container" class="results-container" style="display: none;">
+            <div id="assessment-results" class="assessment-results" style="display: none;">
                 <div class="results-header">
-                    <h3>Your Mental Health Assessment Results</h3>
+                    <h3>Your Brain Health Assessment Results</h3>
                 </div>
                 <div class="results-content">
-                    <div class="score-circle">
-                        <div class="score-percentage">
-                            <span id="score-value">0%</span>
+                    <div class="overall-score">
+                        <div class="score-circle">
+                            <div class="score-percentage">
+                                <span id="brain-score-value">0%</span>
+                            </div>
+                            <div class="score-label">Brain Health Score</div>
                         </div>
-                        <div class="score-label">Mental Health Score</div>
+                        <div id="brain-score-message" class="score-message"></div>
                     </div>
-                    <div id="score-message" class="score-message"></div>
-                    <div id="score-recommendations" class="score-recommendations"></div>
+                    
+                    <div class="domain-scores">
+                        <h4>Cognitive Domain Scores</h4>
+                        <div class="domain-chart">
+                            <canvas id="domain-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="results-details">
+                        <div class="strengths-section">
+                            <h4>Cognitive Strengths</h4>
+                            <div id="cognitive-strengths"></div>
+                        </div>
+                        
+                        <div class="improvement-section">
+                            <h4>Areas for Improvement</h4>
+                            <div id="cognitive-improvements"></div>
+                        </div>
+                        
+                        <div class="recommendations-section">
+                            <h4>Recommendations</h4>
+                            <div id="brain-recommendations"></div>
+                        </div>
+                    </div>
+                    
                     <div class="results-footer">
-                        <p><strong>Disclaimer:</strong> This assessment is not a substitute for professional medical advice. If you're concerned about your mental health, please consult with a qualified healthcare professional.</p>
+                        <p><strong>Disclaimer:</strong> This assessment is not a substitute for professional medical advice. If you have concerns about your cognitive health, please consult with a healthcare professional.</p>
                         <p>For immediate support, call our helpline at <a href="tel:9871463045">9871463045</a></p>
                     </div>
-                    <button id="retake-test" class="retake-button">Retake Assessment</button>
+                    
+                    <div class="results-actions">
+                        <button id="retake-assessment" class="retake-button">Retake Assessment</button>
+                        <button id="save-results" class="save-button">Save Results</button>
+                        <button id="book-consultation" class="consultation-button">Book Consultation</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -995,13 +780,13 @@
 </section>
 
 <style>
-    .mental-health-check {
+    .brain-assessment {
         background-color: var(--light-gray);
         padding: 80px 0;
     }
     
     .assessment-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
         background-color: var(--white);
         border-radius: 15px;
@@ -1015,86 +800,123 @@
         color: var(--white);
     }
     
+    .assessment-intro h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+    
     .assessment-intro p {
-        margin: 0;
+        margin-bottom: 10px;
         line-height: 1.6;
     }
     
-    .question-container {
+    .assessment-form {
         padding: 30px;
     }
     
-    .question {
+    .assessment-progress {
         margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #eee;
     }
     
-    .question:last-child {
-        border-bottom: none;
+    .progress-bar {
+        height: 10px;
+        background-color: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
     }
     
-    .question h3 {
+    .progress {
+        height: 100%;
+        background-color: var(--royal-blue);
+        width: 5%;
+        transition: width 0.3s ease;
+    }
+    
+    .progress-text {
+        text-align: right;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .assessment-questions {
+        margin-bottom: 30px;
+    }
+    
+    .assessment-question {
+        background-color: rgba(65, 105, 225, 0.05);
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .assessment-question h4 {
         color: var(--royal-blue);
         margin-bottom: 15px;
         font-size: 1.2rem;
     }
     
-    .options {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .assessment-question p {
+        margin-bottom: 15px;
+        color: #555;
     }
     
-    .option {
+    .assessment-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .assessment-option {
         display: flex;
         align-items: center;
         padding: 12px 15px;
         border-radius: 8px;
         cursor: pointer;
         transition: all 0.3s ease;
+        border: 2px solid transparent;
     }
     
-    .option:hover {
+    .assessment-option:hover {
         background-color: rgba(65, 105, 225, 0.1);
     }
     
-    .option input[type="radio"] {
-        margin-right: 12px;
-        width: 18px;
-        height: 18px;
+    .assessment-option input[type="radio"] {
+        margin-right: 10px;
         accent-color: var(--royal-blue);
     }
     
-    .option span {
-        flex: 1;
+    .assessment-option.selected {
+        border-color: var(--royal-blue);
+        background-color: rgba(65, 105, 225, 0.1);
     }
     
-    .submit-container {
-        padding: 0 30px 30px;
-        text-align: center;
+    .assessment-navigation {
+        display: flex;
+        justify-content: space-between;
     }
     
-    .calculate-button {
+    .nav-button {
         background-color: var(--royal-blue);
         color: var(--white);
         border: none;
-        padding: 15px 30px;
+        padding: 12px 25px;
         border-radius: 30px;
         font-weight: bold;
-        font-size: 1.1rem;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
     }
     
-    .calculate-button:hover {
+    .nav-button:hover:not(:disabled) {
         background-color: var(--dark-blue);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
     }
     
-    .results-container {
+    .nav-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    
+    .assessment-results {
         padding: 30px;
         text-align: center;
     }
@@ -1105,21 +927,25 @@
         font-size: 1.8rem;
     }
     
+    .overall-score {
+        margin-bottom: 40px;
+    }
+    
     .score-circle {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         background: conic-gradient(
             var(--royal-blue) 0%,
-            var(--royal-blue) var(--score-percentage),
-            #eee var(--score-percentage),
+            var(--royal-blue) var(--brain-score-percentage),
+            #eee var(--brain-score-percentage),
             #eee 100%
         );
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
         position: relative;
     }
     
@@ -1147,41 +973,66 @@
     }
     
     .score-message {
-        margin-bottom: 20px;
         font-size: 1.2rem;
         line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
     }
     
-    .score-recommendations {
-        background-color: rgba(65, 105, 225, 0.1);
-        padding: 20px;
-        border-radius: 10px;
+    .domain-scores {
+        margin-bottom: 40px;
+    }
+    
+    .domain-scores h4 {
+        color: var(--royal-blue);
         margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+    
+    .domain-chart {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .results-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 30px;
         text-align: left;
     }
     
-    .score-recommendations h4 {
+    .results-details h4 {
         color: var(--royal-blue);
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
     }
     
-    .score-recommendations ul {
+    .results-details ul {
         padding-left: 20px;
     }
     
-    .score-recommendations li {
+    .results-details li {
         margin-bottom: 8px;
     }
     
     .results-footer {
-        margin: 20px 0;
+        margin: 30px 0;
         font-size: 0.9rem;
         color: #666;
+        text-align: center;
     }
     
     .results-footer a {
         color: var(--royal-blue);
         font-weight: bold;
+    }
+    
+    .results-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
     }
     
     .retake-button {
@@ -1199,118 +1050,3007 @@
         background-color: var(--royal-blue);
         color: var(--white);
     }
+    
+    .save-button {
+        background-color: var(--light-blue);
+        color: var(--white);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .save-button:hover {
+        background-color: var(--royal-blue);
+    }
+    
+    .consultation-button {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .consultation-button:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    @media (max-width: 768px) {
+        .assessment-options {
+            grid-template-columns: 1fr;
+        }
+        
+        .results-details {
+            grid-template-columns: 1fr;
+        }
+        
+        .results-actions {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>
 
 <script>
-    document.getElementById('calculate-results').addEventListener('click', function() {
-        // Check if all questions have been answered
-        let allAnswered = true;
-        let totalScore = 0;
-        
-        for (let i = 1; i <= 10; i++) {
-            const questionName = 'q' + i;
-            const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
-            
-            if (!selectedOption) {
-                allAnswered = false;
-                break;
-            }
-            
-            totalScore += parseInt(selectedOption.value);
+    // Brain Assessment Questions
+    const brainAssessmentQuestions = [
+        {
+            id: 1,
+            domain: "Memory",
+            question: "How often do you forget important information like appointments or recent conversations?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 2,
+            domain: "Memory",
+            question: "Do you have trouble remembering where you placed common objects (keys, glasses, etc.)?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 3,
+            domain: "Attention",
+            question: "How difficult is it for you to concentrate on tasks or conversations?",
+            options: ["Not difficult at all", "Slightly difficult", "Moderately difficult", "Very difficult", "Extremely difficult"],
+            weight: 1
+        },
+        {
+            id: 4,
+            domain: "Attention",
+            question: "How often do you find yourself distracted by external stimuli when trying to focus?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 5,
+            domain: "Executive Function",
+            question: "How well can you plan and organize multiple tasks?",
+            options: ["Very well", "Well", "Average", "Poorly", "Very poorly"],
+            weight: 1
+        },
+        {
+            id: 6,
+            domain: "Executive Function",
+            question: "How often do you have trouble making decisions?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 7,
+            domain: "Language",
+            question: "How often do you struggle to find the right words during conversations?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 8,
+            domain: "Language",
+            question: "How well can you follow complex instructions or conversations?",
+            options: ["Very well", "Well", "Average", "Poorly", "Very poorly"],
+            weight: 1
+        },
+        {
+            id: 9,
+            domain: "Problem-Solving",
+            question: "How easily can you solve problems that require logical thinking?",
+            options: ["Very easily", "Easily", "Average difficulty", "With difficulty", "With great difficulty"],
+            weight: 1
+        },
+        {
+            id: 10,
+            domain: "Problem-Solving",
+            question: "How often do you feel overwhelmed when faced with new or complex problems?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 11,
+            domain: "Processing Speed",
+            question: "How quickly can you process and respond to information?",
+            options: ["Very quickly", "Quickly", "Average speed", "Slowly", "Very slowly"],
+            weight: 1
+        },
+        {
+            id: 12,
+            domain: "Processing Speed",
+            question: "How often do you feel that your thinking has slowed down?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 13,
+            domain: "Spatial Skills",
+            question: "How well can you visualize objects or spaces in your mind?",
+            options: ["Very well", "Well", "Average", "Poorly", "Very poorly"],
+            weight: 1
+        },
+        {
+            id: 14,
+            domain: "Spatial Skills",
+            question: "How often do you have trouble with directions or navigating familiar places?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 15,
+            domain: "Social Cognition",
+            question: "How well can you interpret social cues and body language?",
+            options: ["Very well", "Well", "Average", "Poorly", "Very poorly"],
+            weight: 1
+        },
+        {
+            id: 16,
+            domain: "Social Cognition",
+            question: "How often do you have difficulty understanding jokes or sarcasm?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 17,
+            domain: "Emotional Regulation",
+            question: "How well can you control your emotions in stressful situations?",
+            options: ["Very well", "Well", "Average", "Poorly", "Very poorly"],
+            weight: 1
+        },
+        {
+            id: 18,
+            domain: "Emotional Regulation",
+            question: "How often do you experience mood swings or emotional outbursts?",
+            options: ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+            weight: 1
+        },
+        {
+            id: 19,
+            domain: "Sleep",
+            question: "How would you rate the quality of your sleep over the past month?",
+            options: ["Excellent", "Good", "Average", "Poor", "Very poor"],
+            weight: 1
+        },
+        {
+            id: 20,
+            domain: "Overall Functioning",
+            question: "How would you rate your overall cognitive function compared to a few years ago?",
+            options: ["Much better", "Slightly better", "About the same", "Slightly worse", "Much worse"],
+            weight: 1
         }
-        
-        if (!allAnswered) {
-            alert('Please answer all questions before calculating your score.');
-            return;
-        }
-        
-        // Calculate percentage (inverse score - lower points mean better mental health)
-        const maxPossibleScore = 40; // 10 questions * max 4 points each
-        const invertedScore = maxPossibleScore - totalScore;
-        const percentage = Math.round((invertedScore / maxPossibleScore) * 100);
-        
-        // Hide the form and show results
-        document.getElementById('mental-health-form').style.display = 'none';
-        document.getElementById('results-container').style.display = 'block';
-        
-        // Update the score circle
-        document.getElementById('score-value').textContent = percentage + '%';
-        
-        // Update the CSS variable for the score circle
-        document.documentElement.style.setProperty('--score-percentage', percentage + '%');
-        
-        // Generate appropriate message and recommendations based on score
-        let message = '';
-        let recommendations = '';
-        
-        if (percentage >= 80) {
-            message = 'Excellent! Your mental health appears to be in a very positive state. You seem to have good coping mechanisms and a healthy approach to life\'s challenges.';
-            recommendations = `
-                <h4>Recommendations:</h4>
-                <ul>
-                    <li>Continue maintaining your healthy habits and self-care practices</li>
-                    <li>Consider sharing your positive strategies with friends and family</li>
-                    <li>Stay mindful of any changes in your mental state over time</li>
-                </ul>
-            `;
-        } else if (percentage >= 60) {
-            message = 'Good! Your mental health appears to be generally positive with room for improvement in some areas.';
-            recommendations = `
-                <h4>Recommendations:</h4>
-                <ul>
-                    <li>Focus on strengthening areas where you're experiencing challenges</li>
-                    <li>Consider incorporating more self-care activities into your routine</li>
-                    <li>Practice mindfulness or meditation to reduce stress</li>
-                    <li>Ensure you're getting adequate sleep and nutrition</li>
-                </ul>
-            `;
-        } else if (percentage >= 40) {
-            message = 'Moderate. You may be experiencing some challenges with your mental well-being that could benefit from attention.';
-            recommendations = `
-                <h4>Recommendations:</h4>
-                <ul>
-                    <li>Consider speaking with a mental health professional for guidance</li>
-                    <li>Practice stress management techniques regularly</li>
-                    <li>Ensure you have a support system you can rely on</li>
-                    <li>Limit social media use if it's affecting your mood</li>
-                    <li>Prioritize sleep, nutrition, and physical activity</li>
-                </ul>
-            `;
-        } else {
-            message = 'Your responses suggest you may be experiencing significant challenges with your mental well-being. It\'s important to seek support.';
-            recommendations = `
-                <h4>Recommendations:</h4>
-                <ul>
-                    <li>We strongly recommend speaking with a mental health professional</li>
-                    <li>Reach out to our support team at 9871463045 for immediate assistance</li>
-                    <li>Consider confiding in trusted friends or family members</li>
-                    <li>Focus on basic self-care: sleep, nutrition, and gentle physical activity</li>
-                    <li>Remember that seeking help is a sign of strength, not weakness</li>
-                </ul>
-            `;
-        }
-        
-        document.getElementById('score-message').innerHTML = message;
-        document.getElementById('score-recommendations').innerHTML = recommendations;
-    });
+    ];
     
-    // Retake test functionality
-    document.getElementById('retake-test').addEventListener('click', function() {
-        // Reset all radio buttons
-        const radioButtons = document.querySelectorAll('input[type="radio"]');
-        radioButtons.forEach(radio => {
-            radio.checked = false;
+    let currentAssessmentIndex = 0;
+    let assessmentAnswers = [];
+    let domainScores = {
+        "Memory": 0,
+        "Attention": 0,
+        "Executive Function": 0,
+        "Language": 0,
+        "Problem-Solving": 0,
+        "Processing Speed": 0,
+        "Spatial Skills": 0,
+        "Social Cognition": 0,
+        "Emotional Regulation": 0,
+        "Sleep": 0,
+        "Overall Functioning": 0
+    };
+    
+    // Initialize brain assessment
+    function initBrainAssessment() {
+        currentAssessmentIndex = 0;
+        assessmentAnswers = [];
+        domainScores = {
+            "Memory": 0,
+            "Attention": 0,
+            "Executive Function": 0,
+            "Language": 0,
+            "Problem-Solving": 0,
+            "Processing Speed": 0,
+            "Spatial Skills": 0,
+            "Social Cognition": 0,
+            "Emotional Regulation": 0,
+            "Sleep": 0,
+            "Overall Functioning": 0
+        };
+        
+        document.getElementById('assessment-questions').innerHTML = '';
+        document.getElementById('assessment-results').style.display = 'none';
+        document.getElementById('assessment-form').style.display = 'block';
+        
+        showAssessmentQuestion();
+        updateAssessmentProgress();
+    }
+    
+    // Show current assessment question
+    function showAssessmentQuestion() {
+        const question = brainAssessmentQuestions[currentAssessmentIndex];
+        const questionHtml = `
+            <div class="assessment-question">
+                <h4>Question ${currentAssessmentIndex + 1}: ${question.domain}</h4>
+                <p>${question.question}</p>
+                <div class="assessment-options">
+                    ${question.options.map((option, index) => `
+                        <div class="assessment-option" data-index="${index}">
+                            <input type="radio" id="aq${question.id}_${index}" name="aq${question.id}" value="${index}">
+                            <label for="aq${question.id}_${index}">${option}</label>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        
+        document.getElementById('assessment-questions').innerHTML = questionHtml;
+        
+        // Add event listeners to options
+        document.querySelectorAll('.assessment-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const input = this.querySelector('input');
+                input.checked = true;
+                
+                // Update selected state
+                document.querySelectorAll('.assessment-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+                
+                // Store answer
+                assessmentAnswers[currentAssessmentIndex] = parseInt(index);
+            });
         });
         
-        // Show the form and hide results
-        document.getElementById('mental-health-form').style.display = 'block';
-        document.getElementById('results-container').style.display = 'none';
+        // Restore previous answer if exists
+        if (assessmentAnswers[currentAssessmentIndex] !== undefined) {
+            const index = assessmentAnswers[currentAssessmentIndex];
+            const option = document.querySelector(`.assessment-option[data-index="${index}"]`);
+            if (option) {
+                option.click();
+            }
+        }
         
-        // Scroll to the top of the assessment
-        document.getElementById('mental-health-check').scrollIntoView({ behavior: 'smooth' });
+        // Update navigation buttons
+        document.getElementById('prev-assessment-question').disabled = currentAssessmentIndex === 0;
+        document.getElementById('next-assessment-question').style.display = currentAssessmentIndex === brainAssessmentQuestions.length - 1 ? 'none' : 'inline-block';
+        document.getElementById('finish-assessment').style.display = currentAssessmentIndex === brainAssessmentQuestions.length - 1 ? 'inline-block' : 'none';
+    }
+    
+    // Update assessment progress
+    function updateAssessmentProgress() {
+        const progress = ((currentAssessmentIndex + 1) / brainAssessmentQuestions.length) * 100;
+        document.getElementById('assessment-progress').style.width = `${progress}%`;
+        document.getElementById('current-assessment-question').textContent = currentAssessmentIndex + 1;
+        document.getElementById('total-assessment-questions').textContent = brainAssessmentQuestions.length;
+    }
+    
+    // Navigation buttons
+    document.getElementById('prev-assessment-question').addEventListener('click', () => {
+        if (currentAssessmentIndex > 0) {
+            currentAssessmentIndex--;
+            showAssessmentQuestion();
+            updateAssessmentProgress();
+        }
+    });
+    
+    document.getElementById('next-assessment-question').addEventListener('click', () => {
+        if (assessmentAnswers[currentAssessmentIndex] !== undefined) {
+            currentAssessmentIndex++;
+            showAssessmentQuestion();
+            updateAssessmentProgress();
+        } else {
+            alert('Please select an answer before proceeding.');
+        }
+    });
+    
+    document.getElementById('finish-assessment').addEventListener('click', () => {
+        if (assessmentAnswers[currentAssessmentIndex] !== undefined) {
+            calculateAssessmentResults();
+        } else {
+            alert('Please select an answer before finishing the assessment.');
+        }
+    });
+    
+    // Calculate assessment results
+    function calculateAssessmentResults() {
+        // Calculate domain scores
+        brainAssessmentQuestions.forEach((question, index) => {
+            // Invert the score (lower index = better)
+            const invertedScore = 4 - assessmentAnswers[index];
+            domainScores[question.domain] += invertedScore;
+        });
+        
+        // Normalize domain scores to percentage
+        Object.keys(domainScores).forEach(domain => {
+            const domainQuestions = brainAssessmentQuestions.filter(q => q.domain === domain).length;
+            const maxScore = domainQuestions * 4; // Max score per question is 4
+            domainScores[domain] = Math.round((domainScores[domain] / maxScore) * 100);
+        });
+        
+        // Calculate overall score
+        const overallScore = Math.round(
+            Object.values(domainScores).reduce((sum, score) => sum + score, 0) / Object.keys(domainScores).length
+        );
+        
+        // Show results
+        document.getElementById('assessment-form').style.display = 'none';
+        document.getElementById('assessment-results').style.display = 'block';
+        
+        // Update overall score
+        document.getElementById('brain-score-value').textContent = overallScore + '%';
+        document.documentElement.style.setProperty('--brain-score-percentage', overallScore + '%');
+        
+        // Generate score message
+        generateScoreMessage(overallScore);
+        
+        // Create domain chart
+        createDomainChart();
+        
+        // Generate detailed results
+        generateDetailedResults();
+    }
+    
+    // Generate score message based on overall score
+    function generateScoreMessage(score) {
+        let message = '';
+        
+        if (score >= 80) {
+            message = 'Excellent! Your brain health appears to be in great shape. You show strong cognitive function across multiple domains.';
+        } else if (score >= 60) {
+            message = 'Good! Your brain health is generally positive with some areas that could benefit from attention. Overall cognitive function is solid.';
+        } else if (score >= 40) {
+            message = 'Moderate. You may be experiencing some challenges with cognitive function that could benefit from attention and possible lifestyle adjustments.';
+        } else {
+            message = 'Your responses suggest you may be experiencing significant challenges with cognitive function. We recommend consulting with a healthcare professional for further evaluation.';
+        }
+        
+        document.getElementById('brain-score-message').textContent = message;
+    }
+    
+    // Create domain scores chart
+    function createDomainChart() {
+        const ctx = document.getElementById('domain-chart').getContext('2d');
+        
+        // Destroy previous chart if exists
+        if (window.domainChart) {
+            window.domainChart.destroy();
+        }
+        
+        // Filter out domains with score of 0
+        const filteredDomains = Object.keys(domainScores).filter(domain => domainScores[domain] > 0);
+        const filteredScores = filteredDomains.map(domain => domainScores[domain]);
+        
+        window.domainChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: filteredDomains,
+                datasets: [{
+                    label: 'Domain Score',
+                    data: filteredScores,
+                    backgroundColor: 'rgba(65, 105, 225, 0.6)',
+                    borderColor: 'rgba(65, 105, 225, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Score (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Cognitive Domains'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+    
+    // Generate detailed results
+    function generateDetailedResults() {
+        // Generate strengths
+        const strengths = [];
+        Object.keys(domainScores).forEach(domain => {
+            if (domainScores[domain] >= 70) {
+                strengths.push(domain);
+            }
+        });
+        
+        const strengthsList = document.getElementById('cognitive-strengths');
+        if (strengths.length > 0) {
+            strengthsList.innerHTML = `<ul>${strengths.map(s => `<li>${s}</li>`).join('')}</ul>`;
+        } else {
+            strengthsList.innerHTML = '<p>No significant cognitive strengths identified.</p>';
+        }
+        
+        // Generate improvements
+        const improvements = [];
+        Object.keys(domainScores).forEach(domain => {
+            if (domainScores[domain] < 50) {
+                improvements.push(domain);
+            }
+        });
+        
+        const improvementsList = document.getElementById('cognitive-improvements');
+        if (improvements.length > 0) {
+            improvementsList.innerHTML = `<ul>${improvements.map(i => `<li>${i}</li>`).join('')}</ul>`;
+        } else {
+            improvementsList.innerHTML = '<p>No significant areas for improvement identified.</p>';
+        }
+        
+        // Generate recommendations
+        const recommendations = [];
+        
+        // General recommendations
+        recommendations.push("Maintain a regular sleep schedule of 7-9 hours per night");
+        recommendations.push("Engage in regular physical exercise, at least 30 minutes most days");
+        recommendations.push("Follow a balanced diet rich in fruits, vegetables, and omega-3 fatty acids");
+        recommendations.push("Stay mentally active with puzzles, reading, or learning new skills");
+        recommendations.push("Manage stress through mindfulness, meditation, or relaxation techniques");
+        
+        // Domain-specific recommendations
+        if (domainScores["Memory"] < 60) {
+            recommendations.push("Try memory exercises like memorization games or techniques");
+            recommendations.push("Use memory aids like calendars, lists, or reminders");
+        }
+        
+        if (domainScores["Attention"] < 60) {
+            recommendations.push("Practice mindfulness meditation to improve focus");
+            recommendations.push("Minimize distractions when working on important tasks");
+        }
+        
+        if (domainScores["Executive Function"] < 60) {
+            recommendations.push("Break large tasks into smaller, manageable steps");
+            recommendations.push("Use planners or digital tools to organize your schedule");
+        }
+        
+        if (domainScores["Sleep"] < 60) {
+            recommendations.push("Establish a consistent bedtime routine");
+            recommendations.push("Limit screen time before bed and create a comfortable sleep environment");
+        }
+        
+        if (domainScores["Emotional Regulation"] < 60) {
+            recommendations.push("Practice deep breathing exercises during stressful moments");
+            recommendations.push("Consider talking to a mental health professional for additional support");
+        }
+        
+        const recommendationsList = document.getElementById('brain-recommendations');
+        recommendationsList.innerHTML = `<ul>${recommendations.map(r => `<li>${r}</li>`).join('')}</ul>`;
+    }
+    
+    // Retake assessment
+    document.getElementById('retake-assessment').addEventListener('click', initBrainAssessment);
+    
+    // Save results
+    document.getElementById('save-results').addEventListener('click', () => {
+        // In a real application, this would save the results to a database or local storage
+        alert('Results saved successfully! You can access them anytime from your profile.');
+    });
+    
+    // Book consultation
+    document.getElementById('book-consultation').addEventListener('click', () => {
+        // Scroll to booking section
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Initialize brain assessment on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        initBrainAssessment();
     });
 </script>
 
+   <!-- Brain Tests & Exercises Section -->
+<section id="brain-tests" class="brain-tests">
+    <div class="container">
+        <div class="section-title">
+            <h2>Brain Tests & Exercises</h2>
+            <p>Assess and improve your cognitive abilities with our scientifically designed tests and brain exercises</p>
+        </div>
+        
+        <div class="brain-tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="cognitive-test">Cognitive Assessment</button>
+                <button class="tab-button" data-tab="memory-game">Memory Game</button>
+                <button class="tab-button" data-tab="puzzle-game">Problem Solving</button>
+                <button class="tab-button" data-tab="reaction-test">Reaction Time</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Cognitive Assessment Tab -->
+                <div id="cognitive-test" class="tab-pane active">
+                    <div class="test-intro">
+                        <h3>Cognitive Abilities Assessment</h3>
+                        <p>This test evaluates your cognitive strengths across different domains. It takes approximately 10-15 minutes to complete.</p>
+                    </div>
+                    
+                    <div class="cognitive-test-container">
+                        <div class="test-progress">
+                            <div class="progress-bar">
+                                <div class="progress" id="test-progress"></div>
+                            </div>
+                            <div class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                        </div>
+                        
+                        <div id="cognitive-questions" class="test-questions">
+                            <!-- Questions will be dynamically inserted here -->
+                        </div>
+                        
+                        <div class="test-navigation">
+                            <button id="prev-question" class="nav-button" disabled>Previous</button>
+                            <button id="next-question" class="nav-button">Next</button>
+                            <button id="finish-test" class="nav-button" style="display: none;">Finish Test</button>
+                        </div>
+                    </div>
+                    
+                    <div id="cognitive-results" class="test-results" style="display: none;">
+                        <div class="results-header">
+                            <h3>Your Cognitive Assessment Results</h3>
+                        </div>
+                        <div class="results-content">
+                            <div class="results-chart">
+                                <canvas id="cognitive-chart"></canvas>
+                            </div>
+                            <div class="results-summary">
+                                <h4>Cognitive Strengths</h4>
+                                <div id="strengths-list"></div>
+                                
+                                <h4>Areas for Improvement</h4>
+                                <div id="improvement-list"></div>
+                                
+                                <h4>Recommended Career Paths</h4>
+                                <div id="career-recommendations"></div>
+                            </div>
+                            <button id="retake-cognitive-test" class="retake-button">Retake Assessment</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory Game Tab -->
+                <div id="memory-game" class="tab-pane">
+                    <div class="game-intro">
+                        <h3>Memory Matching Game</h3>
+                        <p>Test and improve your short-term memory by matching pairs of cards. Flip two cards at a time to find matching pairs.</p>
+                        <div class="game-controls">
+                            <button id="start-memory-game" class="game-button">Start Game</button>
+                            <div class="game-stats">
+                                <div class="stat">Moves: <span id="memory-moves">0</span></div>
+                                <div class="stat">Time: <span id="memory-time">0:00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-game-container">
+                        <div id="memory-board" class="memory-board">
+                            <!-- Memory cards will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div id="memory-results" class="game-results" style="display: none;">
+                        <h3>Game Completed!</h3>
+                        <div class="results-stats">
+                            <div class="stat">Total Moves: <span id="final-moves"></span></div>
+                            <div class="stat">Time: <span id="final-time"></span></div>
+                            <div class="stat">Score: <span id="memory-score"></span></div>
+                        </div>
+                        <button id="play-again-memory" class="game-button">Play Again</button>
+                    </div>
+                </div>
+                
+                <!-- Puzzle Game Tab -->
+                <div id="puzzle-game" class="tab-pane">
+                    <div class="game-intro">
+                        <h3>Sliding Puzzle Challenge</h3>
+                        <p>Test your problem-solving skills with this classic sliding puzzle. Rearrange the tiles to put them in numerical order.</p>
+                        <div class="game-controls">
+                            <button id="start-puzzle-game" class="game-button">Start Game</button>
+                            <div class="game-stats">
+                                <div class="stat">Moves: <span id="puzzle-moves">0</span></div>
+                                <div class="stat">Time: <span id="puzzle-time">0:00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="puzzle-game-container">
+                        <div id="puzzle-board" class="puzzle-board">
+                            <!-- Puzzle tiles will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div id="puzzle-results" class="game-results" style="display: none;">
+                        <h3>Puzzle Solved!</h3>
+                        <div class="results-stats">
+                            <div class="stat">Total Moves: <span id="puzzle-final-moves"></span></div>
+                            <div class="stat">Time: <span id="puzzle-final-time"></span></div>
+                            <div class="stat">Score: <span id="puzzle-score"></span></div>
+                        </div>
+                        <button id="play-again-puzzle" class="game-button">Play Again</button>
+                    </div>
+                </div>
+                
+                <!-- Reaction Time Test Tab -->
+                <div id="reaction-test" class="tab-pane">
+                    <div class="game-intro">
+                        <h3>Reaction Time Test</h3>
+                        <p>Measure how quickly you can respond to visual stimuli. Click as soon as the screen changes color.</p>
+                        <div class="game-controls">
+                            <button id="start-reaction-test" class="game-button">Start Test</button>
+                            <div class="game-stats">
+                                <div class="stat">Best Time: <span id="best-time">--</span></div>
+                                <div class="stat">Average: <span id="avg-time">--</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reaction-test-container">
+                        <div id="reaction-screen" class="reaction-screen">
+                            <div id="reaction-prompt" class="reaction-prompt">
+                                Click Start to begin the test
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="reaction-results" class="game-results" style="display: none;">
+                        <h3>Reaction Time Results</h3>
+                        <div class="results-stats">
+                            <div class="stat">Last Time: <span id="last-reaction-time"></span></div>
+                            <div class="stat">Best Time: <span id="reaction-best-time"></span></div>
+                            <div class="stat">Average: <span id="reaction-avg-time"></span></div>
+                        </div>
+                        <button id="play-again-reaction" class="game-button">Test Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .brain-tests {
+        background-color: var(--light-gray);
+        padding: 80px 0;
+    }
+    
+    .brain-tabs {
+        background-color: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .tab-buttons {
+        display: flex;
+        background-color: var(--royal-blue);
+    }
+    
+    .tab-button {
+        flex: 1;
+        padding: 15px 20px;
+        background: none;
+        border: none;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .tab-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .tab-button.active {
+        background-color: var(--white);
+        color: var(--royal-blue);
+    }
+    
+    .tab-button.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--royal-blue);
+    }
+    
+    .tab-content {
+        padding: 30px;
+    }
+    
+    .tab-pane {
+        display: none;
+    }
+    
+    .tab-pane.active {
+        display: block;
+    }
+    
+    .test-intro, .game-intro {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .test-intro h3, .game-intro h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+    
+    .game-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    
+    .game-button {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+    }
+    
+    .game-button:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+    }
+    
+    .game-stats {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .stat {
+        font-weight: 600;
+    }
+    
+    /* Cognitive Test Styles */
+    .test-progress {
+        margin-bottom: 30px;
+    }
+    
+    .progress-bar {
+        height: 10px;
+        background-color: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    
+    .progress {
+        height: 100%;
+        background-color: var(--royal-blue);
+        width: 10%;
+        transition: width 0.3s ease;
+    }
+    
+    .progress-text {
+        text-align: right;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .test-questions {
+        margin-bottom: 30px;
+    }
+    
+    .question {
+        background-color: rgba(65, 105, 225, 0.05);
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .question h4 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .question-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .question-option {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    
+    .question-option:hover {
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .question-option input[type="radio"] {
+        margin-right: 10px;
+        accent-color: var(--royal-blue);
+    }
+    
+    .question-option.selected {
+        border-color: var(--royal-blue);
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .test-navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav-button {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-button:hover:not(:disabled) {
+        background-color: var(--dark-blue);
+    }
+    
+    .nav-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    
+    .test-results {
+        text-align: center;
+    }
+    
+    .results-chart {
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+    
+    .results-summary {
+        text-align: left;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .results-summary h4 {
+        color: var(--royal-blue);
+        margin: 20px 0 10px;
+    }
+    
+    .results-summary ul {
+        padding-left: 20px;
+    }
+    
+    .results-summary li {
+        margin-bottom: 8px;
+    }
+    
+    .retake-button {
+        background-color: transparent;
+        color: var(--royal-blue);
+        border: 2px solid var(--royal-blue);
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+    
+    .retake-button:hover {
+        background-color: var(--royal-blue);
+        color: var(--white);
+    }
+    
+    /* Memory Game Styles */
+    .memory-board {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .memory-card {
+        aspect-ratio: 1;
+        background-color: var(--royal-blue);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    
+    .memory-card.flipped {
+        transform: rotateY(180deg);
+    }
+    
+    .memory-card.matched {
+        background-color: #4CAF50;
+    }
+    
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .card-front {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        font-size: 1.5rem;
+    }
+    
+    .card-back {
+        background-color: var(--white);
+        transform: rotateY(180deg);
+        font-size: 2rem;
+    }
+    
+    /* Puzzle Game Styles */
+    .puzzle-board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #333;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    .puzzle-tile {
+        aspect-ratio: 1;
+        background-color: var(--light-blue);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .puzzle-tile:hover {
+        background-color: var(--royal-blue);
+    }
+    
+    .puzzle-tile.empty {
+        background-color: transparent;
+        cursor: default;
+    }
+    
+    /* Reaction Test Styles */
+    .reaction-screen {
+        width: 100%;
+        height: 400px;
+        background-color: #f44336;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .reaction-screen.waiting {
+        background-color: #ff9800;
+    }
+    
+    .reaction-screen.ready {
+        background-color: #4CAF50;
+    }
+    
+    .reaction-screen.too-early {
+        background-color: #9c27b0;
+    }
+    
+    .reaction-prompt {
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .game-results {
+        text-align: center;
+        padding: 30px;
+        background-color: rgba(65, 105, 225, 0.1);
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    
+    .results-stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+    }
+    
+    @media (max-width: 768px) {
+        .tab-buttons {
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            flex: 1 0 50%;
+        }
+        
+        .memory-board {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .game-stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .results-stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+
+<script>
+    // Tab functionality
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            
+            // Deactivate all tabs and panes
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            
+            // Activate selected tab and pane
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+    
+    // Cognitive Assessment Test
+    const cognitiveQuestions = [
+        {
+            id: 1,
+            category: "Memory",
+            question: "Remember this sequence: 7, 3, 9, 1, 5. What was the third number?",
+            options: ["7", "3", "9", "1"],
+            correct: 2
+        },
+        {
+            id: 2,
+            category: "Problem-Solving",
+            question: "If all Bloops are Razzies and all Razzies are Loppies, then all Bloops are definitely Loppies?",
+            options: ["True", "False", "Cannot be determined", "None of the above"],
+            correct: 0
+        },
+        {
+            id: 3,
+            category: "Critical Thinking",
+            question: "Which word does not belong: Apple, Banana, Carrot, Orange",
+            options: ["Apple", "Banana", "Carrot", "Orange"],
+            correct: 2
+        },
+        {
+            id: 4,
+            category: "Information Processing",
+            question: "A man lives on the 20th floor of a building. Every morning he takes the elevator down to the ground floor. When he comes home, he takes the elevator to the 10th floor and walks the rest of the way... except on rainy days. Why?",
+            options: ["He enjoys the exercise", "The elevator is broken", "He's too short to reach the button", "He wants to meet neighbors"],
+            correct: 2
+        },
+        {
+            id: 5,
+            category: "Logical Reasoning",
+            question: "If it takes 5 machines 5 minutes to make 5 widgets, how long does it take 100 machines to make 100 widgets?",
+            options: ["5 minutes", "20 minutes", "100 minutes", "500 minutes"],
+            correct: 0
+        },
+        {
+            id: 6,
+            category: "Memory",
+            question: "Remember this list: Dog, Cat, Bird, Fish, Hamster. Which animal comes after Bird?",
+            options: ["Dog", "Cat", "Fish", "Hamster"],
+            correct: 2
+        },
+        {
+            id: 7,
+            category: "Problem-Solving",
+            question: "What comes next in the sequence: 2, 4, 8, 16, ?",
+            options: ["20", "24", "32", "64"],
+            correct: 2
+        },
+        {
+            id: 8,
+            category: "Critical Thinking",
+            question: "A bat and a ball cost $1.10 together. The bat costs $1.00 more than the ball. How much does the ball cost?",
+            options: ["$0.05", "$0.10", "$0.15", "$0.20"],
+            correct: 0
+        },
+        {
+            id: 9,
+            category: "Information Processing",
+            question: "If you rearrange the letters 'CIFAIPC' you would have the name of a:",
+            options: ["City", "Animal", "Ocean", "Country"],
+            correct: 2
+        },
+        {
+            id: 10,
+            category: "Logical Reasoning",
+            question: "If some A are B, and some B are C, then some A are definitely C?",
+            options: ["True", "False", "Cannot be determined", "None of the above"],
+            correct: 2
+        }
+    ];
+    
+    let currentQuestionIndex = 0;
+    let userAnswers = [];
+    let cognitiveScores = {
+        "Memory": 0,
+        "Problem-Solving": 0,
+        "Critical Thinking": 0,
+        "Information Processing": 0,
+        "Logical Reasoning": 0
+    };
+    
+    // Initialize cognitive test
+    function initCognitiveTest() {
+        currentQuestionIndex = 0;
+        userAnswers = [];
+        cognitiveScores = {
+            "Memory": 0,
+            "Problem-Solving": 0,
+            "Critical Thinking": 0,
+            "Information Processing": 0,
+            "Logical Reasoning": 0
+        };
+        
+        document.getElementById('cognitive-questions').innerHTML = '';
+        document.getElementById('cognitive-results').style.display = 'none';
+        document.querySelector('.cognitive-test-container').style.display = 'block';
+        
+        showQuestion();
+        updateProgress();
+    }
+    
+    // Show current question
+    function showQuestion() {
+        const question = cognitiveQuestions[currentQuestionIndex];
+        const questionHtml = `
+            <div class="question">
+                <h4>Question ${currentQuestionIndex + 1}: ${question.category}</h4>
+                <p>${question.question}</p>
+                <div class="question-options">
+                    ${question.options.map((option, index) => `
+                        <div class="question-option" data-index="${index}">
+                            <input type="radio" id="q${question.id}_${index}" name="q${question.id}" value="${index}">
+                            <label for="q${question.id}_${index}">${option}</label>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        
+        document.getElementById('cognitive-questions').innerHTML = questionHtml;
+        
+        // Add event listeners to options
+        document.querySelectorAll('.question-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const input = this.querySelector('input');
+                input.checked = true;
+                
+                // Update selected state
+                document.querySelectorAll('.question-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+                
+                // Store answer
+                userAnswers[currentQuestionIndex] = parseInt(index);
+            });
+        });
+        
+        // Restore previous answer if exists
+        if (userAnswers[currentQuestionIndex] !== undefined) {
+            const index = userAnswers[currentQuestionIndex];
+            const option = document.querySelector(`.question-option[data-index="${index}"]`);
+            if (option) {
+                option.click();
+            }
+        }
+        
+        // Update navigation buttons
+        document.getElementById('prev-question').disabled = currentQuestionIndex === 0;
+        document.getElementById('next-question').style.display = currentQuestionIndex === cognitiveQuestions.length - 1 ? 'none' : 'inline-block';
+        document.getElementById('finish-test').style.display = currentQuestionIndex === cognitiveQuestions.length - 1 ? 'inline-block' : 'none';
+    }
+    
+    // Update progress bar
+    function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / cognitiveQuestions.length) * 100;
+        document.getElementById('test-progress').style.width = `${progress}%`;
+        document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+        document.getElementById('total-questions').textContent = cognitiveQuestions.length;
+    }
+    
+    // Navigation buttons
+    document.getElementById('prev-question').addEventListener('click', () => {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            showQuestion();
+            updateProgress();
+        }
+    });
+    
+    document.getElementById('next-question').addEventListener('click', () => {
+        if (userAnswers[currentQuestionIndex] !== undefined) {
+            currentQuestionIndex++;
+            showQuestion();
+            updateProgress();
+        } else {
+            alert('Please select an answer before proceeding.');
+        }
+    });
+    
+    document.getElementById('finish-test').addEventListener('click', () => {
+        if (userAnswers[currentQuestionIndex] !== undefined) {
+            calculateCognitiveResults();
+        } else {
+            alert('Please select an answer before finishing the test.');
+        }
+    });
+    
+    // Calculate cognitive test results
+    function calculateCognitiveResults() {
+        // Calculate scores for each category
+        cognitiveQuestions.forEach((question, index) => {
+            if (userAnswers[index] === question.correct) {
+                cognitiveScores[question.category]++;
+            }
+        });
+        
+        // Normalize scores to percentage
+        Object.keys(cognitiveScores).forEach(category => {
+            const categoryQuestions = cognitiveQuestions.filter(q => q.category === category).length;
+            cognitiveScores[category] = Math.round((cognitiveScores[category] / categoryQuestions) * 100);
+        });
+        
+        // Show results
+        document.querySelector('.cognitive-test-container').style.display = 'none';
+        document.getElementById('cognitive-results').style.display = 'block';
+        
+        // Create chart
+        createCognitiveChart();
+        
+        // Generate strengths and improvement areas
+        generateCognitiveSummary();
+    }
+    
+    // Create cognitive results chart
+    function createCognitiveChart() {
+        const ctx = document.getElementById('cognitive-chart').getContext('2d');
+        
+        // Destroy previous chart if exists
+        if (window.cognitiveChart) {
+            window.cognitiveChart.destroy();
+        }
+        
+        window.cognitiveChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: Object.keys(cognitiveScores),
+                datasets: [{
+                    label: 'Cognitive Scores',
+                    data: Object.values(cognitiveScores),
+                    backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                    borderColor: 'rgba(65, 105, 225, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(65, 105, 225, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(65, 105, 225, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+    }
+    
+    // Generate cognitive summary
+    function generateCognitiveSummary() {
+        const strengths = [];
+        const improvements = [];
+        
+        Object.keys(cognitiveScores).forEach(category => {
+            if (cognitiveScores[category] >= 80) {
+                strengths.push(category);
+            } else if (cognitiveScores[category] < 60) {
+                improvements.push(category);
+            }
+        });
+        
+        // Generate strengths list
+        const strengthsList = document.getElementById('strengths-list');
+        if (strengths.length > 0) {
+            strengthsList.innerHTML = `<ul>${strengths.map(s => `<li>${s}</li>`).join('')}</ul>`;
+        } else {
+            strengthsList.innerHTML = '<p>No significant strengths identified.</p>';
+        }
+        
+        // Generate improvements list
+        const improvementsList = document.getElementById('improvement-list');
+        if (improvements.length > 0) {
+            improvementsList.innerHTML = `<ul>${improvements.map(i => `<li>${i}</li>`).join('')}</ul>`;
+        } else {
+            improvementsList.innerHTML = '<p>No significant areas for improvement identified.</p>';
+        }
+        
+        // Generate career recommendations
+        const careerRecommendations = document.getElementById('career-recommendations');
+        const careers = [];
+        
+        if (cognitiveScores["Memory"] >= 70) {
+            careers.push("Research Scientist", "Physician/Surgeon", "Psychologist");
+        }
+        if (cognitiveScores["Problem-Solving"] >= 70) {
+            careers.push("Software Engineer", "Data Scientist", "Engineer");
+        }
+        if (cognitiveScores["Critical Thinking"] >= 70) {
+            careers.push("Lawyer/Judge", "Management Consultant", "Architect");
+        }
+        if (cognitiveScores["Information Processing"] >= 70) {
+            careers.push("AI Specialist", "UX/UI Designer", "Data Analyst");
+        }
+        if (cognitiveScores["Logical Reasoning"] >= 70) {
+            careers.push("Mathematician", "Computer Scientist", "Philosopher");
+        }
+        
+        if (careers.length > 0) {
+            // Remove duplicates
+            const uniqueCareers = [...new Set(careers)];
+            careerRecommendations.innerHTML = `<ul>${uniqueCareers.map(c => `<li>${c}</li>`).join('')}</ul>`;
+        } else {
+            careerRecommendations.innerHTML = '<p>Consider exploring various fields to find your best fit.</p>';
+        }
+    }
+    
+    // Retake cognitive test
+    document.getElementById('retake-cognitive-test').addEventListener('click', initCognitiveTest);
+    
+    // Memory Game
+    const memorySymbols = ['🍎', '🍌', '🍒', '🍇', '🍊', '🍋', '🍉', '🍓'];
+    let memoryCards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let memoryMoves = 0;
+    let memoryTimer = null;
+    let memorySeconds = 0;
+    
+    // Initialize memory game
+    function initMemoryGame() {
+        // Reset game state
+        memoryCards = [];
+        flippedCards = [];
+        matchedPairs = 0;
+        memoryMoves = 0;
+        memorySeconds = 0;
+        
+        // Update UI
+        document.getElementById('memory-moves').textContent = '0';
+        document.getElementById('memory-time').textContent = '0:00';
+        document.getElementById('memory-results').style.display = 'none';
+        document.getElementById('memory-board').style.display = 'grid';
+        
+        // Create card pairs
+        const cardPairs = [...memorySymbols, ...memorySymbols];
+        
+        // Shuffle cards
+        for (let i = cardPairs.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cardPairs[i], cardPairs[j]] = [cardPairs[j], cardPairs[i]];
+        }
+        
+        // Create card elements
+        const memoryBoard = document.getElementById('memory-board');
+        memoryBoard.innerHTML = '';
+        
+        cardPairs.forEach((symbol, index) => {
+            const card = document.createElement('div');
+            card.className = 'memory-card';
+            card.dataset.index = index;
+            card.dataset.symbol = symbol;
+            
+            card.innerHTML = `
+                <div class="card-front">?</div>
+                <div class="card-back">${symbol}</div>
+            `;
+            
+            card.addEventListener('click', flipMemoryCard);
+            memoryBoard.appendChild(card);
+            memoryCards.push(card);
+        });
+        
+        // Start timer
+        startMemoryTimer();
+    }
+    
+    // Flip memory card
+    function flipMemoryCard() {
+        // Prevent flipping if already flipped or matched
+        if (this.classList.contains('flipped') || this.classList.contains('matched') || flippedCards.length >= 2) {
+            return;
+        }
+        
+        // Flip card
+        this.classList.add('flipped');
+        flippedCards.push(this);
+        
+        // Check for match if two cards are flipped
+        if (flippedCards.length === 2) {
+            memoryMoves++;
+            document.getElementById('memory-moves').textContent = memoryMoves;
+            
+            const card1 = flippedCards[0];
+            const card2 = flippedCards[1];
+            
+            if (card1.dataset.symbol === card2.dataset.symbol) {
+                // Match found
+                setTimeout(() => {
+                    card1.classList.add('matched');
+                    card2.classList.add('matched');
+                    flippedCards = [];
+                    matchedPairs++;
+                    
+                    // Check if game is complete
+                    if (matchedPairs === memorySymbols.length) {
+                        endMemoryGame();
+                    }
+                }, 500);
+            } else {
+                // No match
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    flippedCards = [];
+                }, 1000);
+            }
+        }
+    }
+    
+    // Start memory game timer
+    function startMemoryTimer() {
+        if (memoryTimer) clearInterval(memoryTimer);
+        
+        memoryTimer = setInterval(() => {
+            memorySeconds++;
+            const minutes = Math.floor(memorySeconds / 60);
+            const seconds = memorySeconds % 60;
+            document.getElementById('memory-time').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
+    
+    // End memory game
+    function endMemoryGame() {
+        clearInterval(memoryTimer);
+        
+        // Calculate score (lower is better)
+        const timeScore = Math.max(0, 300 - memorySeconds); // Max 300 points for time
+        const movesScore = Math.max(0, 200 - (memoryMoves - memorySymbols.length) * 10); // Max 200 points for moves
+        const totalScore = timeScore + movesScore;
+        
+        // Show results
+        document.getElementById('memory-board').style.display = 'none';
+        document.getElementById('memory-results').style.display = 'block';
+        document.getElementById('final-moves').textContent = memoryMoves;
+        document.getElementById('final-time').textContent = document.getElementById('memory-time').textContent;
+        document.getElementById('memory-score').textContent = totalScore;
+    }
+    
+    // Start memory game button
+    document.getElementById('start-memory-game').addEventListener('click', initMemoryGame);
+    
+    // Play again memory game
+    document.getElementById('play-again-memory').addEventListener('click', initMemoryGame);
+    
+    // Puzzle Game
+    let puzzleTiles = [];
+    let emptyTileIndex = 8;
+    let puzzleMoves = 0;
+    let puzzleTimer = null;
+    let puzzleSeconds = 0;
+    
+    // Initialize puzzle game
+    function initPuzzleGame() {
+        // Reset game state
+        puzzleTiles = [1, 2, 3, 4, 5, 6, 7, 8, 0]; // 0 represents empty tile
+        emptyTileIndex = 8;
+        puzzleMoves = 0;
+        puzzleSeconds = 0;
+        
+        // Update UI
+        document.getElementById('puzzle-moves').textContent = '0';
+        document.getElementById('puzzle-time').textContent = '0:00';
+        document.getElementById('puzzle-results').style.display = 'none';
+        document.getElementById('puzzle-board').style.display = 'grid';
+        
+        // Shuffle puzzle
+        shufflePuzzle();
+        
+        // Create puzzle board
+        renderPuzzle();
+        
+        // Start timer
+        startPuzzleTimer();
+    }
+    
+    // Shuffle puzzle
+    function shufflePuzzle() {
+        // Perform random valid moves to shuffle
+        for (let i = 0; i < 100; i++) {
+            const validMoves = getValidMoves();
+            const randomMove = validMoves[Math.floor(Math.random() * validMoves.length)];
+            swapTiles(emptyTileIndex, randomMove);
+        }
+    }
+    
+    // Get valid moves for empty tile
+    function getValidMoves() {
+        const validMoves = [];
+        const row = Math.floor(emptyTileIndex / 3);
+        const col = emptyTileIndex % 3;
+        
+        // Check up
+        if (row > 0) validMoves.push(emptyTileIndex - 3);
+        // Check down
+        if (row < 2) validMoves.push(emptyTileIndex + 3);
+        // Check left
+        if (col > 0) validMoves.push(emptyTileIndex - 1);
+        // Check right
+        if (col < 2) validMoves.push(emptyTileIndex + 1);
+        
+        return validMoves;
+    }
+    
+    // Swap tiles
+    function swapTiles(index1, index2) {
+        [puzzleTiles[index1], puzzleTiles[index2]] = [puzzleTiles[index2], puzzleTiles[index1]];
+        emptyTileIndex = puzzleTiles.indexOf(0);
+    }
+    
+    // Render puzzle board
+    function renderPuzzle() {
+        const puzzleBoard = document.getElementById('puzzle-board');
+        puzzleBoard.innerHTML = '';
+        
+        puzzleTiles.forEach((tile, index) => {
+            const tileElement = document.createElement('div');
+            tileElement.className = tile === 0 ? 'puzzle-tile empty' : 'puzzle-tile';
+            tileElement.textContent = tile === 0 ? '' : tile;
+            tileElement.dataset.index = index;
+            
+            if (tile !== 0) {
+                tileElement.addEventListener('click', () => movePuzzleTile(index));
+            }
+            
+            puzzleBoard.appendChild(tileElement);
+        });
+    }
+    
+    // Move puzzle tile
+    function movePuzzleTile(index) {
+        // Check if tile is adjacent to empty tile
+        const validMoves = getValidMoves();
+        if (validMoves.includes(index)) {
+            // Swap tiles
+            swapTiles(emptyTileIndex, index);
+            puzzleMoves++;
+            document.getElementById('puzzle-moves').textContent = puzzleMoves;
+            
+            // Render updated puzzle
+            renderPuzzle();
+            
+            // Check if puzzle is solved
+            if (isPuzzleSolved()) {
+                endPuzzleGame();
+            }
+        }
+    }
+    
+    // Check if puzzle is solved
+    function isPuzzleSolved() {
+        for (let i = 0; i < 8; i++) {
+            if (puzzleTiles[i] !== i + 1) {
+                return false;
+            }
+        }
+        return puzzleTiles[8] === 0;
+    }
+    
+    // Start puzzle game timer
+    function startPuzzleTimer() {
+        if (puzzleTimer) clearInterval(puzzleTimer);
+        
+        puzzleTimer = setInterval(() => {
+            puzzleSeconds++;
+            const minutes = Math.floor(puzzleSeconds / 60);
+            const seconds = puzzleSeconds % 60;
+            document.getElementById('puzzle-time').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
+    
+    // End puzzle game
+    function endPuzzleGame() {
+        clearInterval(puzzleTimer);
+        
+        // Calculate score (lower is better)
+        const timeScore = Math.max(0, 500 - puzzleSeconds); // Max 500 points for time
+        const movesScore = Math.max(0, 500 - puzzleMoves * 5); // Max 500 points for moves
+        const totalScore = timeScore + movesScore;
+        
+        // Show results
+        document.getElementById('puzzle-board').style.display = 'none';
+        document.getElementById('puzzle-results').style.display = 'block';
+        document.getElementById('puzzle-final-moves').textContent = puzzleMoves;
+        document.getElementById('puzzle-final-time').textContent = document.getElementById('puzzle-time').textContent;
+        document.getElementById('puzzle-score').textContent = totalScore;
+    }
+    
+    // Start puzzle game button
+    document.getElementById('start-puzzle-game').addEventListener('click', initPuzzleGame);
+    
+    // Play again puzzle game
+    document.getElementById('play-again-puzzle').addEventListener('click', initPuzzleGame);
+    
+    // Reaction Time Test
+    let reactionTimer = null;
+    let reactionStartTime = 0;
+    let reactionTimeout = null;
+    let reactionTimes = [];
+    let reactionState = 'idle'; // idle, waiting, ready, too-early, clicked
+    
+    // Initialize reaction test
+    function initReactionTest() {
+        reactionState = 'idle';
+        reactionTimes = [];
+        
+        // Update UI
+        document.getElementById('best-time').textContent = '--';
+        document.getElementById('avg-time').textContent = '--';
+        document.getElementById('reaction-results').style.display = 'none';
+        document.getElementById('reaction-screen').style.display = 'flex';
+        
+        // Reset screen
+        const screen = document.getElementById('reaction-screen');
+        screen.className = 'reaction-screen';
+        document.getElementById('reaction-prompt').textContent = 'Click Start to begin the test';
+    }
+    
+    // Start reaction test
+    function startReactionTest() {
+        if (reactionState === 'idle') {
+            reactionState = 'waiting';
+            
+            const screen = document.getElementById('reaction-screen');
+            screen.className = 'reaction-screen waiting';
+            document.getElementById('reaction-prompt').textContent = 'Wait for green...';
+            
+            // Set random delay before showing green
+            const delay = Math.random() * 3000 + 2000; // 2-5 seconds
+            
+            reactionTimeout = setTimeout(() => {
+                if (reactionState === 'waiting') {
+                    reactionState = 'ready';
+                    screen.className = 'reaction-screen ready';
+                    document.getElementById('reaction-prompt').textContent = 'Click now!';
+                    reactionStartTime = Date.now();
+                }
+            }, delay);
+        }
+    }
+    
+    // Handle reaction screen click
+    document.getElementById('reaction-screen').addEventListener('click', () => {
+        if (reactionState === 'idle') {
+            startReactionTest();
+        } else if (reactionState === 'waiting') {
+            // Clicked too early
+            clearTimeout(reactionTimeout);
+            reactionState = 'too-early';
+            
+            const screen = document.getElementById('reaction-screen');
+            screen.className = 'reaction-screen too-early';
+            document.getElementById('reaction-prompt').textContent = 'Too soon! Click to try again';
+            
+            setTimeout(() => {
+                if (reactionState === 'too-early') {
+                    reactionState = 'idle';
+                    screen.className = 'reaction-screen';
+                    document.getElementById('reaction-prompt').textContent = 'Click Start to begin the test';
+                }
+            }, 2000);
+        } else if (reactionState === 'ready') {
+            // Calculate reaction time
+            const reactionTime = Date.now() - reactionStartTime;
+            reactionTimes.push(reactionTime);
+            
+            // Update stats
+            updateReactionStats();
+            
+            // Show result
+            reactionState = 'clicked';
+            
+            const screen = document.getElementById('reaction-screen');
+            screen.className = 'reaction-screen';
+            document.getElementById('reaction-prompt').innerHTML = `
+                Your reaction time: <strong>${reactionTime}ms</strong><br>
+                Click to test again
+            `;
+            
+            setTimeout(() => {
+                if (reactionState === 'clicked') {
+                    reactionState = 'idle';
+                    document.getElementById('reaction-prompt').textContent = 'Click Start to begin the test';
+                }
+            }, 3000);
+        }
+    });
+    
+    // Update reaction time statistics
+    function updateReactionStats() {
+        if (reactionTimes.length > 0) {
+            const bestTime = Math.min(...reactionTimes);
+            const avgTime = Math.round(reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length);
+            
+            document.getElementById('best-time').textContent = `${bestTime}ms`;
+            document.getElementById('avg-time').textContent = `${avgTime}ms`;
+        }
+    }
+    
+    // Start reaction test button
+    document.getElementById('start-reaction-test').addEventListener('click', startReactionTest);
+    
+    // Test again reaction
+    document.getElementById('play-again-reaction').addEventListener('click', () => {
+        document.getElementById('reaction-results').style.display = 'none';
+        document.getElementById('reaction-screen').style.display = 'flex';
+        initReactionTest();
+    });
+    
+    // Initialize cognitive test on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        initCognitiveTest();
+    });
+</script>
+
+<!-- Add Chart.js for the cognitive assessment radar chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- AI Guidance Tool Section -->
+<section id="ai-guidance" class="ai-guidance">
+    <div class="container">
+        <div class="section-title">
+            <h2>AI Brain Health Guidance</h2>
+            <p>Get personalized recommendations and guidance to optimize your brain health and cognitive performance</p>
+        </div>
+        
+        <div class="guidance-container">
+            <div class="guidance-intro">
+                <div class="ai-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="intro-text">
+                    <h3>Meet Your AI Brain Coach</h3>
+                    <p>I'm here to help you understand and improve your brain health. Based on your assessment results and goals, I'll provide personalized recommendations, exercises, and resources to help you optimize your cognitive performance.</p>
+                    <p>Start by telling me about your goals or asking any questions about brain health!</p>
+                </div>
+            </div>
+            
+            <div class="guidance-interface">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h4>AI Brain Coach</h4>
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI Brain Coach. I can help you with:</p>
+                                <ul>
+                                    <li>Personalized brain health recommendations</li>
+                                    <li>Cognitive exercises and activities</li>
+                                    <li>Study techniques for better learning</li>
+                                    <li>Lifestyle adjustments for optimal brain function</li>
+                                    <li>Progress tracking and goal setting</li>
+                                </ul>
+                                <p>What would you like to focus on today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="user-input" placeholder="Type your message here...">
+                        <button id="send-message" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="recommendations">Get Recommendations</button>
+                        <button class="quick-action" data-action="exercises">Brain Exercises</button>
+                        <button class="quick-action" data-action="study-tips">Study Tips</button>
+                        <button class="quick-action" data-action="lifestyle">Lifestyle Advice</button>
+                    </div>
+                </div>
+                
+                <div class="guidance-sidebar">
+                    <div class="sidebar-section">
+                        <h4>Your Cognitive Profile</h4>
+                        <div class="profile-summary">
+                            <div class="profile-item">
+                                <span class="profile-label">Memory</span>
+                                <div class="profile-bar">
+                                    <div class="profile-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Attention</span>
+                                <div class="profile-bar">
+                                    <div class="profile-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Problem-Solving</span>
+                                <div class="profile-bar">
+                                    <div class="profile-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Processing Speed</span>
+                                <div class="profile-bar">
+                                    <div class="profile-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h4>Recommended Resources</h4>
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <i class="fas fa-book"></i>
+                                <div class="resource-info">
+                                    <h5>Brain-Boosting Foods</h5>
+                                    <p>Nutrition guide for optimal brain function</p>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <div class="resource-info">
+                                    <h5>Exercise & Brain Health</h5>
+                                    <p>Physical activities that enhance cognition</p>
+                                </div>
+                            </div>
+                            <div class="resource-item">
+                                <i class="fas fa-bed"></i>
+                                <div class="resource-info">
+                                    <h5>Sleep Optimization</h5>
+                                    <p>Improve sleep quality for better memory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h4>Your Goals</h4>
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <div class="goal-checkbox">
+                                    <input type="checkbox" id="goal1" checked>
+                                    <label for="goal1">Improve memory retention</label>
+                                </div>
+                                <div class="goal-progress">75%</div>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-checkbox">
+                                    <input type="checkbox" id="goal2">
+                                    <label for="goal2">Enhance focus during study</label>
+                                </div>
+                                <div class="goal-progress">40%</div>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-checkbox">
+                                    <input type="checkbox" id="goal3">
+                                    <label for="goal3">Reduce study stress</label>
+                                </div>
+                                <div class="goal-progress">60%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+</section>
+
+<style>
+    .ai-guidance {
+        background-color: var(--light-gray);
+        padding: 80px 0;
+    }
+    
+    .guidance-container {
+        background-color: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .guidance-intro {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+        color: var(--white);
+    }
+    
+    .ai-avatar {
+        font-size: 4rem;
+        margin-right: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .intro-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .intro-text p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    
+    .guidance-interface {
+        display: flex;
+        min-height: 600px;
+    }
+    
+    .chat-container {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #eee;
+    }
+    
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+                align-items: center;
+        padding: 15px 20px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+    }
+    
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    
+    .status-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #4CAF50;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+    
+    .chat-messages {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+    }
+    
+    .message {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .message-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .user-message .message-avatar {
+        background-color: var(--light-blue);
+    }
+    
+    .message-content {
+        background-color: var(--white);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        max-width: 80%;
+    }
+    
+    .ai-message .message-content {
+        border-top-left-radius: 0;
+    }
+    
+    .user-message .message-content {
+        background-color: var(--light-blue);
+        color: var(--white);
+        border-top-right-radius: 0;
+        margin-left: auto;
+    }
+    
+    .message-content p {
+        margin-bottom: 10px;
+    }
+    
+    .message-content p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .message-content ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .chat-input {
+        display: flex;
+        padding: 15px;
+        background-color: var(--white);
+        border-top: 1px solid #eee;
+    }
+    
+    .chat-input input {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    
+    .send-button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .send-button:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    .quick-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-top: 1px solid #eee;
+    }
+    
+    .quick-action {
+        padding: 8px 15px;
+        background-color: var(--white);
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+    
+    .quick-action:hover {
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border-color: var(--royal-blue);
+    }
+    
+    .guidance-sidebar {
+        flex: 1;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+    
+    .sidebar-section {
+        margin-bottom: 30px;
+    }
+    
+    .sidebar-section h4 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .profile-summary {
+        margin-bottom: 20px;
+    }
+    
+    .profile-item {
+        margin-bottom: 15px;
+    }
+    
+    .profile-label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .profile-bar {
+        height: 10px;
+        background-color: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .profile-fill {
+        height: 100%;
+        background-color: var(--royal-blue);
+    }
+    
+    .resource-list {
+        margin-bottom: 20px;
+    }
+    
+    .resource-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: var(--white);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .resource-item:hover {
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .resource-item i {
+        font-size: 1.5rem;
+        color: var(--royal-blue);
+        margin-right: 15px;
+    }
+    
+    .resource-info h5 {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+    
+    .resource-info p {
+        font-size: 0.85rem;
+        color: #666;
+    }
+    
+    .goals-list {
+        margin-bottom: 20px;
+    }
+    
+    .goal-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: var(--white);
+        border-radius: 8px;
+    }
+    
+    .goal-checkbox {
+        display: flex;
+        align-items: center;
+    }
+    
+    .goal-checkbox input {
+        margin-right: 10px;
+    }
+    
+    .goal-checkbox label {
+        font-size: 0.9rem;
+    }
+    
+    .goal-progress {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: var(--royal-blue);
+    }
+    
+    .guidance-tabs {
+        background-color: var(--white);
+    }
+    
+    .tab-buttons {
+        display: flex;
+        background-color: #f0f0f0;
+    }
+    
+    .tab-button {
+        flex: 1;
+        padding: 15px 20px;
+        background: none;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .tab-button:hover {
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .tab-button.active {
+        background-color: var(--white);
+        color: var(--royal-blue);
+    }
+    
+    .tab-button.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--royal-blue);
+    }
+    
+    .tab-content {
+        padding: 30px;
+    }
+    
+    .tab-pane {
+        display: none;
+    }
+    
+    .tab-pane.active {
+        display: block;
+    }
+    
+    /* Daily Plan Styles */
+    .daily-plan-container h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+    }
+    
+    .daily-plan-container p {
+        margin-bottom: 30px;
+        color: #666;
+    }
+    
+    .plan-timeline {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    .plan-timeline::before {
+        content: '';
+        position: absolute;
+        left: 60px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #eee;
+    }
+    
+    .plan-item {
+        display: flex;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .plan-time {
+        width: 120px;
+        font-weight: bold;
+        color: var(--royal-blue);
+        padding-right: 20px;
+        text-align: right;
+    }
+    
+    .plan-content {
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .plan-content::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--royal-blue);
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .plan-content h4 {
+        color: var(--royal-blue);
+        margin-bottom: 10px;
+    }
+    
+    .plan-tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .tag {
+        padding: 4px 10px;
+        background-color: rgba(65, 105, 225, 0.1);
+        color: var(--royal-blue);
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .plan-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .plan-button {
+        padding: 10px 20px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .plan-button:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    /* Exercises Styles */
+    .exercises-container h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+    }
+    
+    .exercises-container p {
+        margin-bottom: 30px;
+        color: #666;
+    }
+    
+    .exercise-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .exercise-category h4 {
+        color: var(--royal-blue);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+    }
+    
+    .exercise-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .exercise-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .exercise-item:hover {
+        background-color: rgba(65, 105, 225, 0.1);
+    }
+    
+    .exercise-icon {
+        width: 50px;
+        height: 50px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .exercise-info {
+        flex: 1;
+    }
+    
+    .exercise-info h5 {
+        margin-bottom: 5px;
+    }
+    
+    .exercise-info p {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .exercise-meta {
+        display: flex;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .duration {
+        color: var(--royal-blue);
+    }
+    
+    .difficulty {
+        color: #666;
+    }
+    
+    .exercise-button {
+        padding: 8px 15px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .exercise-button:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    /* Resources Styles */
+    .resources-container h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+    }
+    
+    .resources-container p {
+        margin-bottom: 30px;
+        color: #666;
+    }
+    
+    .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .resource-card {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .resource-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .resource-icon {
+        width: 70px;
+        height: 70px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 20px;
+        font-size: 2rem;
+    }
+    
+    .resource-card h4 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+    }
+    
+    .resource-card p {
+        margin-bottom: 20px;
+        color: #666;
+    }
+    
+    .resource-card ul {
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    
+    .resource-card li {
+        margin-bottom: 8px;
+    }
+    
+    .resource-button {
+        padding: 10px 20px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .resource-button:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    /* Progress Styles */
+    .progress-container h3 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+    }
+    
+    .progress-container p {
+        margin-bottom: 30px;
+        color: #666;
+    }
+    
+    .progress-overview {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .progress-stat {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--royal-blue);
+        margin-bottom: 5px;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+        color: #666;
+    }
+    
+    .progress-charts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .chart-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .chart-container h4 {
+        color: var(--royal-blue);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .achievements h4 {
+        color: var(--royal-blue);
+        margin-bottom: 20px;
+    }
+    
+    .achievement-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .achievement {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .achievement.unlocked {
+        background-color: rgba(76, 175, 80, 0.1);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+    
+    .achievement.locked {
+        opacity: 0.6;
+    }
+    
+    .achievement-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .achievement.unlocked .achievement-icon {
+        background-color: #4CAF50;
+        color: var(--white);
+    }
+    
+    .achievement.locked .achievement-icon {
+        background-color: #ccc;
+        color: #999;
+    }
+    
+    .achievement-info h5 {
+        margin-bottom: 5px;
+    }
+    
+    .achievement-info p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    @media (max-width: 992px) {
+        .guidance-interface {
+            flex-direction: column;
+        }
+        
+        .chat-container {
+            border-right: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .guidance-sidebar {
+            border-top: 1px solid #eee;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .guidance-intro {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .ai-avatar {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        .tab-buttons {
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            flex: 1 0 50%;
+        }
+        
+        .progress-overview {
+            flex-direction: column;
+        }
+        
+        .progress-stat {
+            padding: 10px;
+        }
+    }
+</style>
+
+<script>
+    // AI Guidance Tool JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Deactivate all tabs and panes
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // Activate selected tab and pane
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Chat functionality
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-message');
+        
+        // AI responses
+        const aiResponses = {
+            recommendations: "Based on your cognitive profile, I recommend focusing on memory enhancement and attention exercises. Your memory scores are strong, but attention could use improvement. Try the concentration meditation exercise daily for 20 minutes.",
+            exercises: "I've selected some exercises that target your specific needs. For memory improvement, try the Memory Palace Technique. For better focus, the Concentration Meditation exercise would be beneficial. Would you like me to guide you through one of these?",
+            "study-tips": "Here are some effective study techniques for your learning style: 1) Use spaced repetition for better retention, 2) Practice active recall instead of passive reading, 3) Take short breaks every 25-30 minutes, 4) Teach concepts to others to reinforce learning.",
+            lifestyle: "For optimal brain health, I recommend: 1) 7-9 hours of quality sleep, 2) Regular physical exercise (30 min/day), 3) A diet rich in omega-3s and antioxidants, 4) Mindfulness practice to reduce stress, 5) Limiting screen time before bed."
+        };
+        
+        // Send message function
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+            
+            // Add user message
+            addMessage(message, 'user');
+            
+            // Clear input
+            userInput.value = '';
+            
+            // Simulate AI thinking
+            setTimeout(() => {
+                // Check for keywords in user message
+                let response = "I understand you're interested in brain health. Could you tell me more about what specific area you'd like to focus on?";
+                
+                if (message.toLowerCase().includes('recommend') || message.toLowerCase().includes('suggestion')) {
+                    response = aiResponses.recommendations;
+                } else if (message.toLowerCase().includes('exercise') || message.toLowerCase().includes('practice')) {
+                    response = aiResponses.exercises;
+                } else if (message.toLowerCase().includes('study') || message.toLowerCase().includes('learn')) {
+                    response = aiResponses['study-tips'];
+                } else if (message.toLowerCase().includes('lifestyle') || message.toLowerCase().includes('habit')) {
+                    response = aiResponses.lifestyle;
+                } else if (message.toLowerCase().includes('memory')) {
+                    response = "Memory can be improved through various techniques. I recommend trying the Memory Palace Technique or spaced repetition. Would you like me to explain how these work?";
+                } else if (message.toLowerCase().includes('focus') || message.toLowerCase().includes('attention')) {
+                    response = "Improving focus requires practice. Try the Pomodoro Technique (25 min focused work, 5 min break) and mindfulness meditation. Reducing distractions is also key.";
+                } else if (message.toLowerCase().includes('stress') || message.toLowerCase().includes('anxiety')) {
+                    response = "Managing stress is crucial for brain health. Try deep breathing exercises, regular physical activity, and mindfulness meditation. Getting enough sleep also helps regulate stress hormones.";
+                }
+                
+                addMessage(response, 'ai');
+            }, 1000);
+        }
+        
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const avatarDiv = document.createElement('div');
+            avatarDiv.className = 'message-avatar';
+            avatarDiv.innerHTML = sender === 'ai' ? '<i class="fas fa-robot"></i>' : '<i class="fas fa-user"></i>';
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = `<p>${text}</p>`;
+            
+            messageDiv.appendChild(avatarDiv);
+            messageDiv.appendChild(contentDiv);
+            
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // Send message on button click
+        sendButton.addEventListener('click', sendMessage);
+        
+        // Send message on Enter key
+        userInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // Quick action buttons
+        document.querySelectorAll('.quick-action').forEach(button => {
+            button.addEventListener('click', () => {
+                const action = button.getAttribute('data-action');
+                addMessage(aiResponses[action], 'ai');
+            });
+        });
+        
+        // Initialize progress charts
+        function initProgressCharts() {
+            // Cognitive Performance Chart
+            const progressCtx = document.getElementById('progress-chart');
+            if (progressCtx) {
+                new Chart(progressCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                        datasets: [{
+                            label: 'Memory',
+                            data: [65, 70, 72, 75],
+                            borderColor: 'rgba(65, 105, 225, 1)',
+                            backgroundColor: 'rgba(65, 105, 225, 0.1)',
+                            tension: 0.4
+                        }, {
+                            label: 'Attention',
+                            data: [50, 55, 60, 65],
+                            borderColor: 'rgba(100, 149, 237, 1)',
+                            backgroundColor: 'rgba(100, 149, 237, 0.1)',
+                            tension: 0.4
+                        }, {
+                            label: 'Problem-Solving',
+                            data: [75, 78, 82, 85],
+                            borderColor: 'rgba(25, 25, 112, 1)',
+                            backgroundColor: 'rgba(25, 25, 112, 0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Exercise Completion Chart
+            const exerciseCtx = document.getElementById('exercise-chart');
+            if (exerciseCtx) {
+                new Chart(exerciseCtx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Memory Exercises', 'Focus Exercises', 'Problem-Solving', 'Not Started'],
+                        datasets: [{
+                            data: [5, 4, 3, 8],
+                            backgroundColor: [
+                                'rgba(65, 105, 225, 0.8)',
+                                'rgba(100, 149, 237, 0.8)',
+                                'rgba(25, 25, 112, 0.8)',
+                                'rgba(200, 200, 200, 0.8)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+        }
+        
+        // Initialize charts when progress tab is active
+        document.querySelector('[data-tab="progress"]').addEventListener('click', function() {
+            setTimeout(initProgressCharts, 100);
+        });
+        
+        // Exercise buttons
+        document.querySelectorAll('.exercise-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const exerciseName = this.closest('.exercise-item').querySelector('h5').textContent;
+                addMessage(`Starting ${exerciseName} exercise. This will take approximately 15 minutes. Find a quiet place where you won't be disturbed.`, 'ai');
+                
+                // Simulate exercise completion
+                setTimeout(() => {
+                    addMessage(`Great job completing the ${exerciseName} exercise! Your brain is getting stronger with each practice. Remember to do this exercise regularly for best results.`, 'ai');
+                }, 15000);
+            });
+        });
+        
+        // Resource buttons
+        document.querySelectorAll('.resource-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const resourceName = this.closest('.resource-card').querySelector('h4').textContent;
+                addMessage(`Opening ${resourceName} section. Here you'll find curated resources to support your brain health journey.`, 'ai');
+            });
+        });
+        
+        // Plan buttons
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent;
+                addMessage(`${action} feature coming soon! This will help you stay on track with your brain health plan.`, 'ai');
+            });
+        });
+    });
+</script>
     <!-- Book Now Section -->
     <section id="book" class="book-now">
         <div class="container">
