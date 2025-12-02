@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Support - Gen Z's Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-blue: #4169E1;
+            --light-blue: #6495ED;
+            --dark-blue: #191970;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--royal-blue);
+            color: var(--white);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Service Banner */
+        .service-banner {
+            background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+            color: var(--white);
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        
+        .service-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-banner p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .service-banner-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Service Detail Section */
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-detail-main {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+        
+        .service-image-container {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-detail-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .service-description {
+            flex: 1;
+        }
+        
+        .service-description h3 {
+            color: var(--royal-blue);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-description p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .service-description ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .service-description li {
+            margin-bottom: 10px;
+        }
+        
+        .service-features {
+            margin-bottom: 60px;
+        }
+        
+        .service-features h3 {
+            color: var(--royal-blue);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--royal-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+        
+        .feature-item h4 {
+            color: var(--royal-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .feature-item p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .service-benefits {
+            margin-bottom: 60px;
+        }
+        
+        .service-benefits h3 {
+            color: var(--royal-blue);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: var(--light-gray);
+            padding: 25px;
+            border-radius: 15px;
+        }
+        
+        .benefit-item i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .benefit-item h4 {
+            color: var(--royal-blue);
+            margin-bottom: 5px;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .service-cta {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+            border-radius: 15px;
+            color: var(--white);
+            margin-bottom: 60px;
+        }
+        
+        .service-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--royal-blue);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--light-blue);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a i {
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--royal-blue);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .service-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .service-detail-main {
+                flex-direction: column;
+            }
+            
+            .features-grid,
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+               Gen Z's Development
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Banner -->
+    <section class="service-banner">
+        <div class="container">
+            <h1>Group Support</h1>
+            <p>Connect with peers and build community through shared experiences</p>
+        </div>
+    </section>
+
+    <!-- Service Detail Section -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-main">
+                    <div class="service-image-container">
+                        <img src="https://picsum.photos/seed/group-detail/800/500.jpg" alt="Group Support" class="service-detail-image">
+                    </div>
+                    
+                    <div class="service-description">
+                        <h3>About Group Support</h3>
+                        <p>Our group support sessions bring together Gen Z individuals facing similar challenges in a safe, facilitated environment. Led by experienced mental health professionals, these groups provide a space to share experiences, learn from others, and build meaningful connections.</p>
+                        
+                        <h3>What We Offer</h3>
+                        <ul>
+                            <li>Themed support groups for various mental health concerns</li>
+                            <li>Peer-led discussion groups with professional facilitation</li>
+                            <li>Skill-building workshops in a group setting</li>
+                            <li>Online and in-person group options</li>
+                            <li>Ongoing support communities beyond formal sessions</li>
+                        </ul>
+                        
+                        <h3>Our Approach</h3>
+                        <p>We believe in the power of shared experience and mutual support. Our groups are designed to be inclusive, respectful, and empowering. We create a structured environment where everyone feels heard and valued, while maintaining appropriate boundaries and confidentiality.</p>
+                    </div>
+                </div>
+                
+                <div class="service-features">
+                    <h3>Group Options</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Peer Support Groups</h4>
+                            <p>Connect with others facing similar challenges</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Skill-Building Workshops</h4>
+                            <p>Learn practical skills in a group setting</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h4>Virtual Groups</h4>
+                            <p>Join from anywhere with our online sessions</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4>Ongoing Communities</h4>
+                            <p>Continuous support between formal sessions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-benefits">
+                    <h3>Benefits of Group Support</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Reduced Isolation</h4>
+                                <p>Connect with others who understand your experiences</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Diverse Perspectives</h4>
+                                <p>Gain insights from others with similar challenges</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Social Skill Development</h4>
+                                <p>Practice communication in a safe environment</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cost-Effective Support</h4>
+                                <p>Access professional guidance at a lower cost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MindGen</h3>
+                    <p>Dedicated to supporting Gen Z's mental health journey with specialized services and understanding.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#book">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Anxiety Management</a></li>
+                        <li><a href="#">Depression Support</a></li>
+                        <li><a href="#">Stress Relief Techniques</a></li>
+                        <li><a href="#">Therapy Sessions</a></li>
+                        <li><a href="#">Group Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 9871463045</li>
+                        <li><i class="fas fa-envelope"></i> info@mindgen.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Mind City, 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 MindGen. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
